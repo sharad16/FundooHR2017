@@ -1,0 +1,44 @@
+<!-- <div class="scroll">
+    <div class="left">
+        <h2>Salary payslip Report</h2>
+        <div>
+            <div ng-repeat="checkbox in checkboxes">
+                <table style="width:100%">
+
+                    <tr>
+                        <td width="2%"><input id="input" type="checkbox" name="{{checkbox.name}}" checklist-value="{{checkbox.name}}" ng-click="clearParent()" ng-model="checkbox.selected">
+                            <td class="td" align=bottom; width="20%">{{checkbox.name}}</td>
+                            <td class="td" align=bottom; width="20%">{{checkbox.status}}</td>
+                            <td class="td" align=bottom; width="20%">{{checkbox.Company}}</td>
+                    </tr>
+                </table>
+            </div>
+            <br><br><input id="input" class="Select-All" type="checkbox" ng-click="toggleSelect()" /><span class="Select-All"> Select All </span><br />
+            <a href=""><button>Generate</button></a>
+        </div>
+    </div>
+</div>
+<div ui-view></div> -->
+
+
+<div class="scroll" style="margin-top:200px;">
+    <div class="left">
+        <h2>Salary payslip Report</h2>
+        <div ng-repeat="checkbox in checkboxes">
+            <table style="width:100%">
+                <tr>
+                    <td width="2%"><input type="checkbox" ng-checked="all">
+                        <td class="td" align=bottom; width="20%">{{checkbox.name}}</td>
+                        <td class="td" align=bottom; width="20%">{{checkbox.status}}</td>
+                        <td class="td" align=bottom; width="20%">{{checkbox.Company}}</td>
+                </tr>
+            </table>
+        </div>
+    <input type="checkbox" ng-model="all">Select All</input>
+
+        <a href=""><button class="button">Generate</button></a>
+
+    </div>
+</div>
+<div ui-view></div>
+<!-- input class="checkbox" type="checkbox" name="check[]"> This is Item 1</li -->

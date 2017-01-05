@@ -1,0 +1,51 @@
+[
+{
+    "id": 1,
+    "name":"Mrunal desai",
+    "status":"Internship",
+    "Company":"Meru",
+      "selected" : "false"
+},
+{
+  "id": 2,
+  "name":"Arati Patel",
+  "status":"Fellowship",
+  "Company":"BridgeLabz",
+    "selected" : "false"
+},
+{
+  "id": 3,
+  "name":"Arjun thakur",
+  "status":"Fellowship",
+  "Company":"BridgeLabz",
+  "selected" : "false"
+},
+{
+  "id": 4,
+  "name": "P V raman",
+  "status":"Fellowship",
+  "Company":"BridgeLabz",
+    "selected" : "false"
+},
+{
+  "id": 5,
+  "name":"Aman Mehra",
+  "status":"InternShip",
+  "Company":"Next education",
+    "selected" : "false"
+},
+{
+  "id": 6,
+  "name":"kartik hamingi",
+  "status":"Fellowship",
+  "Company":"BridgeLabz",
+    "selected" : "false"
+},
+{
+  "id": 7,
+  "name":"Priyanka Shetty",
+  "status":"Fellowship",
+  "Company":"BridgeLabz",
+    "selected" : "false"
+}
+]

@@ -1,0 +1,196 @@
+.scroll {
+    /*background-color: #00FFFF;*/
+    width:1000px;
+    height:1000px;
+    overflow: scroll;
+}
+body{
+  background-color: rgba(255, 255, 255,1);
+}
+div.left{
+  margin-left:100px;
+}
+.button{
+  width: 188px;
+  height: 53px;
+  border-radius: 5px;
+  opacity: 100;
+  background-color: #9FC1D0;
+  color:white;
+  margin-left:200px;
+  margin-top:80px;
+  font-size: 20px;
+}
+table, th, td {
+    border:0px solid black;
+
+}
+table{
+   border-collapse: collapse;
+
+}
+#input{
+  width: 21px;
+  height: 21px;
+  border-radius: 5px;
+  opacity: 100;
+  border: solid 1px #979797;
+}
+h2{
+width: 269px;
+height: 34px;
+opacity: 100;
+text-align: left;
+color: #3B5372;
+font-family: AppleGothic;
+line-height: 0px;
+font-size: 28px;
+letter-spacing: 0px;
+margin-left:-50px;
+ font-weight:300;
+ }
+
+.td{
+  color:rgba(59, 83, 114, 1);
+  font-family:Applegothic;
+
+
+}
+tr,td{
+  height:35px;
+
+}
+.division{
+
+width: 810px;
+height: 352px;
+opacity: 100;
+border: solid 1px #FFFFFF;
+
+}
+.Select-All {
+  color:rgba(59, 83, 114, 1);
+  font-family:Applegothic;
+ }
+
+ /*////*/
+ img.image{
+   display: inline-block;
+   margin-top: 5%;
+max-width:42px;
+height: 48px;
+opacity: 100;
+text-align: left;
+color:red;
+font-family: Ionicons;
+line-height: 0px;
+font-size: 48px;
+letter-spacing: 0px;
+margin-left:80px;
+margin-bottom:100px;
+
+}
+button.Generate{
+
+  width: 188px;
+  height: 53px;
+  border-radius: 5px;
+  opacity: 100;
+  background-color: #6FB8D9;
+  margin-left: 300px;
+margin-top: 20px;
+margin-right: 1000px;
+}
+button.Generate:hover {
+  border-color: grey;
+}
+.Attendance-Report{
+
+height: 34px;
+opacity: 100;
+text-align: left;
+color: #3B5372;
+font-family: AppleGothic;
+line-height: 0px;
+font-size: 28px;
+letter-spacing: 0px;
+margin-top: 40px;
+margin-left:30px;
+font-weight:200;
+ }
+
+ span.Clicking-on-the-gene {
+width: 724px;
+height: 70px;
+opacity: 100;
+text-align: center;
+color: #94999B;
+font-family: AppleGothic;
+line-height: 35px;
+font-size: 14px;
+margin-top: 100px;
+letter-spacing: 0px;
+margin-left:40px;
+margin-right: 20px;
+margin-top:5%;
+display: inline-block;
+vertical-align: top;
+margin-top: -15%;
+}
+
+div.gene{
+ width: 724px;
+ height: 70px;
+ opacity: 100;
+ text-align: center;
+ color: #94999B;
+ font-family: AppleGothic;
+ line-height: 35px;
+ font-size: 20px;
+ letter-spacing: 0px;
+ margin-left: 200px;
+ margin-top: 150px;
+   }
+.note{
+  width: 93px;
+height: 23px;
+opacity: 100;
+text-align: left;
+color: #FFFFFF;
+font-family: Ionicons;
+font-size: 20px;
+}
+h6.Previous
+{
+width: 85px;
+height: 27px;
+opacity: 100;
+text-align: left;
+color: #3B5372;
+font-family: AppleGothic;
+line-height: 0px;
+font-size: 22px;
+letter-spacing: 0px;
+border:0;
+outline:none;
+margin-top:295px;
+margin-left: 60px;
+font-weight:200;
+}
+
+a.link{
+    text-decoration: none;
+}
+img{
+max-width:40px;
+max-height:50px;
+opacity: 100;
+text-align: left;
+color: #3B5372;
+font-family: material;
+line-height: 0px;
+font-size: 30px;
+letter-spacing: 0px;
+margin-bottom:-315px;
+
+}
