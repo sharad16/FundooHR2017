@@ -5,7 +5,7 @@ angular.module('fundooHrApp')
       .then(function() {
         console.log("logout")
         toastr.info('You have been logged out');
-        $state.go('login');
+        $state.go('login'); //after logout option is clicked login page is redirected..
       }).catch(function (error) {
         console.log(error.data.message, error.status);
         // toastr.error(error.data.message, error.status);

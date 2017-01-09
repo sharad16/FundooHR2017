@@ -18,6 +18,26 @@
       "name": "P V raman",
       "L_status": 3,
         "selected": "false"
+    },
+    {
+      "name": "P V raman",
+      "L_status": 3,
+        "selected": "false"
+    },
+    {
+      "name": "P V raman",
+      "L_status": 3,
+        "selected": "false"
+    },
+    {
+      "name": "P V raman",
+      "L_status": 3,
+        "selected": "false"
+    },
+    {
+      "name": "P V raman",
+      "L_status": 3,
+        "selected": "false"
     }
   ]},
   {
@@ -101,6 +121,26 @@
       "L_status": 0,
         "selected": "false"
     }
-  ]}
+  ]},  {
+      "Company": "MERU",
+      "selected": "false",
+
+      "EmplList":
+      [{
+        "name": "Arati Patel",
+        "L_status": 0,
+        "selected": "false"
+      },
+      {
+        "name": "Arjun Thakur",
+        "L_status": 1,
+          "selected": "false"
+      },
+      {
+        "name": "P V raman",
+        "L_status": 3,
+          "selected": "false"
+      }
+    ]}
 ]
 }

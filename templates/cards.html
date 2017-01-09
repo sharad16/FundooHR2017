@@ -1,68 +1,73 @@
 <div class="container">
+    <div class="row cards">
+        <div class="col-lg-4 col-md-6 col-xs-12">
+            <div class="sidebar">
+                <div class="C-header">
+                <span>  <h3 class="text">Attendance summary</h3></span>
 
-            <div class="row cards">
-                <div class="col-lg-4 col-md-6 col-xs-12">
-                    <div class="sidebar">
-                    <div class="header">
-                        <a href=""><img class="image" ng-src="images/summary.png"></img></a>
-                      <h3>Attendance summary</h3>
-                      <div class="bottom-align-text">
-                        <span class="date1">{{ today | date : "dd,MMMM y" }}</span>
-                      </div>
-                    </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-xs-12">
-                    <div class="content">
-                      <div class="header">
-                          <a href=""><img class="image" ng-src="images/summary.png"></img></a>
-                        <h3>Attendance Fallout</h3>
-                        <div class="bottom-align-text">
-                        <span class="date2">{{ today | date : "MMMM y" }}</span>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-xs-12">
-                    <div class="sidebar">
-                      <div class="header">
-                          <a href=""><img class="image" ng-src="images/summary.png"></img></a>
-                        <h3>Leave summary</h3>
-                        <div class="bottom-align-text">
-                        <span class="date3">{{ today | date : "MMMM y" }}</span>
-                      </div>
-
-                      </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-xs-12">
-                    <div class="sidebar">
-                      <div class="header">
-                          <a href=""><img class="image" ng-src="images/summary.png"></img></a>
-                        <h3>Engineers</h3>
-                      </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-xs-12">
-                    <div class="content">
-                      <div class="header">
-                          <a href=""><img class="image" ng-src="images/summary.png"></img></a>
-                        <h3>Clients</h3>
-                      </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-xs-12">
-                    <div class="sidebar">
-                      <div class="header">
-                      <a ui-sref="home.report"><img class="image" ng-src="images/summary.png"></img></a>
-                        <h3>Reports</h3>
-
-                   </div>
+                    <a href=""><span><img class="toc" ng-src="images/summary.png"><span>
+                    </a>
+                    <div class="bottom-align-text">
+                        <span class="date1">{{ today | date : "MMMM y" }}</span>
                     </div>
                 </div>
             </div>
         </div>
-      </div>
-      <div ui-view></div>
+        <div class="col-lg-4 col-md-6 col-xs-12">
+            <div class="sidebar">
+                <div class="header">
+                <span>  <h3 class="text">Attendance Fallout</h3></span>
+
+                    <a href=""><span><img class="toc" ng-src="images/summary.png"></img></span>
+                    </a>
+                    <div class="bottom-align-text">
+                        <span class="date2">{{ today | date : "MMMM y" }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-xs-12">
+            <div class="sidebar">
+                <div class="header">
+                <span>  <h3 class="text">Leave summary</h3></span>
+
+                    <a href=""><span><img class="toc" ng-src="images/summary.png"></img></span>
+                    </a>
+                    <div class="bottom-align-text">
+                        <span class="date3">{{ today | date : "MMMM y" }}</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-xs-12">
+            <div class="sidebar">
+                <div class="header">
+                    <a href=""><img class="toc1" ng-src="images/summary.png"></img>
+                    </a>
+                    <h3 class="text1">Engineers</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-xs-12">
+            <div class="sidebar">
+                <div class="header">
+                    <a href=""><img class="toc1" ng-src="images/summary.png"></img>
+                    </a>
+                    <h3 class="text1">Clients</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-xs-12">
+            <div class="sidebar">
+                <div class="header">
+                    <a ui-sref="home.report"><img class="toc1" ng-src="images/summary.png"></img>
+                    </a>
+                    <h3 class="text1">Reports</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div ui-view></div>

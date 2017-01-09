@@ -1,0 +1,23 @@
+<div class="scroll" style="margin-top:200px;">
+    <div class="left">
+        <h2>Salary Payslip Report</h2>
+        <form name="myform">
+            <div ng-repeat="checkbox in checkboxes">
+                <table style="width:100%">
+                    <tr>
+                      <div>
+                            <td width="2%"><input type="checkbox" id="toggle" ng-click="optionToggled()"  ng-model="checkboxes[$index].selected"></td>
+                        </div>
+                        <td class="td" align=bottom; width="7%">{{checkbox.name}}</td>
+                        <td class="td" align=bottom; width="7%">{{checkbox.status}}</td>
+                        <td class="td" align=bottom; width="7%">{{checkbox.Company}}</td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+        <div class="inp"><input type="checkbox" ng-model="all" ng-click="toggleAll()">Select All</input>
+        </div>
+        <button ng-class="{'enable':!checkboxValid}" ng-disabled="checkboxValid">Generate</button>
+    </div>
+</div>
+<div ui-view></div>
