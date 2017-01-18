@@ -23,9 +23,9 @@
                         <span class="glyphicon glyphicon-user"></span>{{name}}
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li>{{email}}</li>
+                        <li class="mail">{{email}}</li>
                         <li ng-if="isAuth()">
-                            <a ui-sref="logout"><span class="glyphicon">&#xe017;</span>Logout</a>
+                        <div class="logoutmenu"><a ui-sref="logout"><span class="glyphicon">&#xe017;</span>&nbsp&nbspLogout</a></div>
                         </li>
                     </ul>
                 </li>

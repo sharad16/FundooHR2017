@@ -11,7 +11,7 @@ angular.module('fundooHrApp').controller('loginController', function($scope, $st
     //   };
     var config = {
         method: 'POST',
-        url: 'http://192.168.0.171:3000/login'
+        url: 'http://192.168.0.118:3000/login'
     };
     $scope.login = function() {
         $auth.login($scope.user, config)
