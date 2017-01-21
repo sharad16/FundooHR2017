@@ -1,4 +1,4 @@
- angular.module("fundooHrApp", ['ui.router', 'ngMaterial', 'ngAnimate', 'ngAria', 'ngMessages', 'satellizer', 'toastr'])
+ angular.module("fundooHrApp", ['ui.router', 'ngMaterial', 'ngAnimate', 'ngAria', 'ngMessages', 'satellizer', 'toastr','LocalStorageModule'])
      .config(function($stateProvider, $urlRouterProvider, $httpProvider, $authProvider) {
          var skipIfLoggedIn = ['$q', '$auth', function($q, $auth) {
              var deferred = $q.defer();

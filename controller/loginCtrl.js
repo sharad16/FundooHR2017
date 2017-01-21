@@ -1,17 +1,13 @@
 angular.module('fundooHrApp').controller('loginController', function($scope, $state, $auth) {
-    //  $scope.formSubmit = function() {
-    //     if(LoginService.login($scope.email, $scope.password)) {
-    //       $scope.error = '';
-    //       $scope.email = '';
-    //       $scope.password = '';
-    //       $state.transitionTo('home');
-    //     } else {
-    //       $scope.error = "Incorrect email/password !";
-    //     }
-    //   };
+
+   //  $scope.formSubmit = function() {
+      $scope.em=/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+   $scope.ps = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+
+  $scope.loginLoading=false;
     var config = {
         method: 'POST',
-        url: 'http://192.168.0.118:3000/login'
+        url: 'http://192.168.0.133:3000/login'
     };
     $scope.login = function() {
         $auth.login($scope.user, config)

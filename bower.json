@@ -1,7 +1,7 @@
 {
   "name": "fandoo-HR Proj",
   "authors": [
-    "05061993 <swatidindurle@gmail.com>"
+    "05061993 <sharadvanjari5@gmail.com>"
   ],
   "description": "",
   "main": "",
@@ -23,6 +23,7 @@
     "hammerjs": "^2.0.8",
     "bootstrap": "^3.3.7",
     "satellizer": "^0.15.5",
-    "angular-material": "^1.1.1"
+    "angular-material": "^1.1.1",
+    "angular-local-storage": "^0.5.2"
   }
 }

@@ -1,4 +1,4 @@
-<nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top" style="color:rgba(59, 83, 114, 1);">
+<nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -8,9 +8,8 @@
                    <span class="icon-bar"></span>
       </button>
             <div class="nav-brand">
-                <img src="images/logo.png" width="43px" height="47px" class="logo">
-                <span><strong>FundooHR</strong> </span>
-                </img>
+                <img src="images/logo.png" class="logo"></img>
+                <span style="color:#3B5372;"><strong>FundooHR</strong> </span>
             </div>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -19,39 +18,31 @@
                 <li><a href="#"><span class="glyphicon glyphicon-time"></span>{{ today | date : "dd,MMMM y" }}
        </a></li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <span class="glyphicon glyphicon-user"></span>{{name}}
+                    <a class="dropdown-toggle" data-toggle="dropdown" id="name">
+                        <span class="glyphicon glyphicon-user">{{name}}</span>
                         <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu" id="block">
                         <li class="mail">{{email}}</li>
                         <li ng-if="isAuth()">
-                        <div class="logoutmenu"><a ui-sref="logout"><span class="glyphicon">&#xe017;</span>&nbsp&nbspLogout</a></div>
+                        <div class="logout"><a ui-sref="logout"><span class="glyphicon">&#xe017;</span>&nbsp&nbspLogout</a></div>
                         </li>
                     </ul>
                 </li>
             </ul>
-            <div class="container">
-                <div class="row row-fluid">
-                    <div class="span2">
-                        <ul class="nav navbar-nav list" style="color: #3B5372">
-                            <li><a ui-sref=".dashboard">DashBoards</a></li>
-                            <li><a>Engineers</a></li>
-                            <li><a>Attendence</a></li>
-                            <li><a>Clients</a></li>
-                            <li><a ui-sref="home.report">Reports</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
-</nav>
-<div ui-view></div>
+            <div class="row">
 
-<!--<li class="active"><a ui-sref="DashBoard">DashBoards</a></li>
-      <li><a ui-sref="Engineers">Engineers</a></li>
-      <li><a ui-sref="Attendence">Attendence</a></li>
-      <li><a ui-sref="Clients">Clients</a></li>
-      <li><a ui-sref="Reports">Reports</a></li>-->
+  <ul class="nav navbar-nav "id="nav-content">
+                                  <li ng-class="{'active':(nav==='dashboard')}"><a ui-sref="home.dashboard" ng-click="nav='dashboard'" >DashBoards</a></li>
+                                  <li><a>Engineer</a></li>
+                                  <li ng-class="{'active':(nav==='attendence')}"><a ng-click="nav='attendence'" ui-sref="home.Attendence">Attendence</a></li>
+                                  <li><a>Clients</a></li>
+                                 <li ng-class="{'active':(nav==='repo')}"><a ui-sref="home.report"ng-click="nav='repo'">Report</a></li>
+                              </ul>
+                          </div>
+                      </div>
+
+                      <!-- /.navbar-collapse -->
+                  </div>
+                  <!-- /.container-fluid -->
+              </nav>
+              <ui-view></ui-view>

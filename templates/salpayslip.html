@@ -3,15 +3,18 @@
         <h2>Salary Payslip Report</h2>
         <form name="myform">
           <div class="scroll">
-            <div  ng-repeat="checkbox in checkboxes track by $index">
+            <div  ng-repeat="emp in allemployeelist track by $index">
                 <table id="padtable">
                     <tr>
                       <div>
                     <td class="tdata"><input type="checkbox" ng-click="optionToggled($index)"  ng-model="checkboxes[$index].selected"></td>
                   </div>
-                        <td class="tdata1" align=bottom;>{{checkbox.name}}</td>
-                        <td class="tdata1" align=bottom;>{{checkbox.status}}</td>
-                        <td class="tdata1" id="padtd" align=bottom;>{{checkbox.Company}}</td>
+                  <!-- <td class="tdata1" alighn="bottom;">{{allemployeelist.engineerId}}</td> -->
+                    <td class="tdat1" align="bottom;">{{emp.engineerId}}</td>
+                      <td class="tdata1" align=bottom;>{{emp.employeeName}}</td>
+
+                        <td class="tdata1" align=bottom;>{{emp.employeeStatus}}</td>
+                        <td class="tdata1" id="padtd" align=bottom;>{{emp.company}}</td>
                     </tr>
                 </table>
             </div>
