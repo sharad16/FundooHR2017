@@ -3,12 +3,12 @@
         <div class="col-lg-4 col-md-6 col-xs-12">
             <div class="sidebar">
                 <div class="C-header">
-                <span>  <h3 class="text">Attendance summary</h3></span>
+                    <span>  <h3 class="text">Attendance summary</h3></span>
 
                     <a href=""><span><img class="toc" ng-src="images/summary.png"><span>
                     </a>
                     <div class="bottom-align-text">
-                        <span class="date1">{{ today | date : "MMMM y" }}</span>
+                        <span class="date1">{{ previous | date : "dd,MMMM y" }}</span>
                     </div>
                 </div>
             </div>
@@ -16,12 +16,12 @@
         <div class="col-lg-4 col-md-6 col-xs-12">
             <div class="sidebar">
                 <div class="header">
-                <span>  <h3 class="text">Attendance Fallout</h3></span>
+                    <span>  <h3 class="text">Attendance Fallout</h3></span>
 
                     <a href=""><span><img class="toc" ng-src="images/summary.png"></img></span>
                     </a>
                     <div class="bottom-align-text">
-                        <span class="date2">{{ today | date : "MMMM y" }}</span>
+                        <span class="date2">{{ previous | date : "dd,MMMM y" }}</span>
                     </div>
                 </div>
             </div>
@@ -29,12 +29,12 @@
         <div class="col-lg-4 col-md-6 col-xs-12">
             <div class="sidebar">
                 <div class="header">
-                <span>  <h3 class="text">Leave summary</h3></span>
+                    <span>  <h3 class="text">Leave summary</h3></span>
 
                     <a href=""><span><img class="toc" ng-src="images/summary.png"></img></span>
                     </a>
                     <div class="bottom-align-text">
-                        <span class="date3">{{ today | date : "MMMM y" }}</span>
+                        <span class="date2">{{ previous | date : "dd,MMMM y" }}</span>
                     </div>
 
                 </div>

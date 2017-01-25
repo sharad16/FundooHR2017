@@ -3,18 +3,15 @@
         <h2>Salary Payslip Report</h2>
         <form name="myform">
           <div class="scroll">
-            <div  ng-repeat="emp in allemployeelist track by $index">
+            <div  ng-repeat="empData in employeesalary track by $index">
                 <table id="padtable">
                     <tr>
                       <div>
-                    <td class="tdata"><input type="checkbox" ng-click="optionToggled($index)"  ng-model="checkboxes[$index].selected"></td>
+                    <td class="tdata"><input type="checkbox" ng-change="selectedEmp(empData.selected,empData)"  ng-model="employeesalary[$index].selected"></td>
                   </div>
-                  <!-- <td class="tdata1" alighn="bottom;">{{allemployeelist.engineerId}}</td> -->
-                    <td class="tdat1" align="bottom;">{{emp.engineerId}}</td>
-                      <td class="tdata1" align=bottom;>{{emp.employeeName}}</td>
-
-                        <td class="tdata1" align=bottom;>{{emp.employeeStatus}}</td>
-                        <td class="tdata1" id="padtd" align=bottom;>{{emp.company}}</td>
+                        <td class="tdata1" align=bottom;>{{empData.employeeName}}</td>
+                        <td class="tdata1" align=bottom;>{{empData.employeeStatus}}</td>
+                        <td class="tdata1" id="padtd" align=bottom;>{{empData.company}}</td>
                     </tr>
                 </table>
             </div>
@@ -23,8 +20,8 @@
           </div>
         <div class="inp"><input type="checkbox" ng-model="all" ng-click="toggleAll()">Select All</input>
         </div>
-        <button class="disable" ng-class="{'enable':!checkboxValid}" ng-disabled="checkboxValid" ng-click="disp()">Generate</button>
-        <a href="#"><img class="payslip_image" ng-src="{{image}}" /></a>
+        <button class="disable" ng-class="{'enable':checkboxValid}" ng-disabled="!checkboxValid" ng-click="disp()">Generate</button>
+        <a href="#"><img ng-click="sendId()" class="payslip_image" ng-src="{{image}}" /></a>
         &nbsp
         <div class="Clicking" ng-bind="Message"></div>
 

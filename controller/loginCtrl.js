@@ -1,25 +1,27 @@
 angular.module('fundooHrApp').controller('loginController', function($scope, $state, $auth) {
 
-   //  $scope.formSubmit = function() {
-      $scope.em=/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-   $scope.ps = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+    // Regular expresion for pattern matching ie email pattern;
+    $scope.emailp = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    // Regular expresion for pattern matching ie password pattern;
+    $scope.passwordp = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
 
-  $scope.loginLoading=false;
+//post API call for validation of password and emailid.
     var config = {
         method: 'POST',
-        url: 'http://192.168.0.133:3000/login'
+        url: 'http://192.168.0.17:3000/login'
     };
     $scope.login = function() {
+        $scope.loginLoading = true;
         $auth.login($scope.user, config)
             .then(function(data) {
                 console.log("You have successfully signed in!")
                 $state.go('home'); //after login page navbar page is redirected...
                 // $location.path('/');
+
             })
             .catch(function(error) {
                 console.log(error.data.message, error.status);
-                $scope.error = "Incorrect email/password !";
-                // toastr.error(error.data.message, error.status);
+
             });
     };
     $scope.authenticate = function(provider) {
