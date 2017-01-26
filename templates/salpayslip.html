@@ -20,8 +20,8 @@
           </div>
         <div class="inp"><input type="checkbox" ng-model="all" ng-click="toggleAll()">Select All</input>
         </div>
-        <button class="disable" ng-class="{'enable':checkboxValid}" ng-disabled="!checkboxValid" ng-click="disp()">Generate</button>
-        <a href="#"><img ng-click="sendId()" class="payslip_image" ng-src="{{image}}" /></a>
+        <button class="disable" ng-class="{'enable':checkboxValid}" ng-disabled="!checkboxValid" ng-click="dispFile()">Generate</button>
+        <a href="#"><img ng-click="takeId()" class="payslip_image" ng-src="{{image}}" /></a>
         &nbsp
         <div class="Clicking" ng-bind="Message"></div>
 

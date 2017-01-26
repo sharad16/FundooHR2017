@@ -6,7 +6,7 @@
     <div id="main" class="col-md-6 col-lg-4 col-xs-12" ng-repeat="(key,value) in CompanyList track by $index">
         <div class="cmp"><input type="checkbox" ng-model="value.selected" ng-checked="allCompany" ng-change="toggleAll($index)">
             <span class="span">{{value.company}}</span></div>
-        <div id="main1">
+        <div id="main1" style="overflow: auto;height: inherit;">
             <table>
                 <tr ng-repeat="(k,x) in value.employeeList">
                     <td width="15%"><input type="checkbox" ng-model="x.selected" ng-checked="allCompany" ng-change="optionToggled($index)" />&nbsp &nbsp&nbsp{{x.employeeName}}

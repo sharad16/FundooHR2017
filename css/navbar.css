@@ -42,11 +42,7 @@
     display: table-cell;
 }
 }
-/*nav{
-    background-color: #D8D1C7 !important;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 50) !important;
-    height: 130px;
-}*/
+
 .nav-brand{
     opacity: 100;
     text-align: left;
@@ -130,6 +126,7 @@
     /*min-height: 1000px;*/
     /*margin-bottom: 20px;*/
     border: 1px solid;
+    box-shadow: 1px 1px 5px 1px grey;
 }
 #nav-content li.active>a:hover{
  background-color: #D8D1C7 ;

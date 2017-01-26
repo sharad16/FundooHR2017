@@ -1,9 +1,9 @@
 angular.module('fundooHrApp').controller('loginController', function($scope, $state, $auth) {
 
     // Regular expresion for pattern matching ie email pattern;
-    $scope.emailp = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    $scope.emailre = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
     // Regular expresion for pattern matching ie password pattern;
-    $scope.passwordp = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+    $scope.passre = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
 
 //post API call for validation of password and emailid.
     var config = {
@@ -28,7 +28,7 @@ angular.module('fundooHrApp').controller('loginController', function($scope, $st
         $auth.authenticate(provider)
             .then(function() {
                 console.log("You have successfully signed in!" + provider + "!");
-                $state.go('home'); //after login page,authentication, navbar page is redirected...
+                $state.go('home.dashboard'); //after login page,authentication, navbar page is redirected...
             })
             .catch(function(error) {
                 if (error.message) {

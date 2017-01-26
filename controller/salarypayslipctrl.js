@@ -1,16 +1,6 @@
 var app = angular.module('fundooHrApp');
 app.controller("selectAll", function($scope, $http, restService, $filter) {
-    // without restservice or without base url
-    // var token=localStorage.getItem('satellizer_token');
-    // console.log("salarypayslip key"+token);
-    // $http({
-    //   "method":"GET",
-    //   "url":"http://192.168.0.144:3000/readAllEmployee?token="+token
-    // }).  then(function(data){
-    //   console.log(data);
-    //     $scope.employeesalary=data.data.allEmployee;
-    //     console.log("getting salary info..");
-    //   });
+
     //fetching data by making rest servic call
     var key = localStorage.getItem("satellizer_token");
     var query = {
@@ -28,6 +18,7 @@ app.controller("selectAll", function($scope, $http, restService, $filter) {
         }).catch(function(error) {
             console.log(error);
         });
+        //fuction for selecting
     $scope.sendId = function() {
 
         var todayDate = $filter('date')(new Date(), 'MM/dd/yy');
@@ -41,7 +32,7 @@ app.controller("selectAll", function($scope, $http, restService, $filter) {
             .then(function(data, status, headers, config) {
                 console.log(data);
                 var anchor = angular.element('<a/>');
-                console.log("anshor" + anchor);
+                console.log("anchor" + anchor);
                 anchor.attr({
                     href: 'data:attachment/csv;charset=utf-8,' + encodeURI(data.data),
                     target: '_blank',
@@ -78,7 +69,7 @@ app.controller("selectAll", function($scope, $http, restService, $filter) {
                 }
             }
             console.log(engiId);
-            // localStorage.setItem('array':'data');
+
             //enabling button while atleast one checkbox is checked..
             var i = 1;
             $scope.employeesalary.forEach(function(item) {
@@ -116,9 +107,9 @@ app.controller("selectAll", function($scope, $http, restService, $filter) {
             console.log(alldata);
         }
         //function to display icon when a button is clicked..
-    $scope.disp = function() {
+    $scope.dispFile = function() {
         $scope.image = 'images/download.png';
         $scope.Message = "Click on the above icon to download";
-        // $scope.filename=
+
     }
 });
