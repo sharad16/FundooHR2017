@@ -1,5 +1,5 @@
 var app = angular.module('fundooHrApp');
-app.controller("selectAll", function($scope, $http, restService, $filter) {
+app.controller("selectAll", function($scope, $http, restService, $filter,$timeout) {
 
     //fetching data by making rest servic call
     var key = localStorage.getItem("satellizer_token");
@@ -9,24 +9,24 @@ app.controller("selectAll", function($scope, $http, restService, $filter) {
     restService.getRequest('readAllEmployee', query)
         .then(function(data) {
             $scope.employeesalary = data.data.allEmployee;
-            // console.log("before" + data.data.allEmployee);
+
             $scope.employeesalary.forEach(function(item) {
-                // console.log(item);
+
                 item.selected = false;
             });
-            // console.log("data after addind new attr:", data.data.allEmployee);
+
         }).catch(function(error) {
             console.log(error);
         });
         //fuction for selecting
-    $scope.sendId = function() {
+    $scope.takeId = function() {
 
         var todayDate = $filter('date')(new Date(), 'MM/dd/yy');
         console.log("sending req", engiId);
         var query = {
             token: key,
             selectedEngineer: ['427188EI', '427188EI']
-                // selectedEngineer:JSON.stringify(engiId)
+
         };
         restService.postRequest('downloadSalaryReport', query)
             .then(function(data, status, headers, config) {
@@ -48,7 +48,7 @@ app.controller("selectAll", function($scope, $http, restService, $filter) {
             console.log(toggleStatus);
             angular.forEach($scope.employeesalary, function(itm) {
                 itm.selected = toggleStatus;
-                // console.log("all data"+itm);
+
             });
             $scope.checkboxValid = $scope.employeesalary.every(function(item) {
                 return item.selected;
@@ -73,7 +73,7 @@ app.controller("selectAll", function($scope, $http, restService, $filter) {
             //enabling button while atleast one checkbox is checked..
             var i = 1;
             $scope.employeesalary.forEach(function(item) {
-                // console.log($scope.checkboxValid);
+
                 if (item.selected === true) {
                     $scope.checkboxValid = true;
                     return; //terminates foreach..
@@ -108,8 +108,15 @@ app.controller("selectAll", function($scope, $http, restService, $filter) {
         }
         //function to display icon when a button is clicked..
     $scope.dispFile = function() {
+ $timeout(function() {
+
+      var tcDate = $filter('date')(new Date(), 'MM/dd/yy');
+
+        $scope.fileName=tcDate + "EngineerData.csv"
         $scope.image = 'images/download.png';
+        $scope.showImg=true;
         $scope.Message = "Click on the above icon to download";
+      },1000)
 
     }
 });

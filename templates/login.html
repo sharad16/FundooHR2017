@@ -20,8 +20,8 @@
                             <span class="loader">
                              <img ng-if="loginLoading" src="images/loader.gif" width="25px" height="25px" />
                              </span>
-                            <span ng-show="Form.email.$error.pattern" style="color:red;"><center><h6><b>Invalid Email id.</h6></center></span>
-                            <span ng-show="Form.password.$error.pattern" style="color:red"><center><h6><b>Invalid Password</h6></center></span>
+                            <span ng-show="Form.email.$error.pattern" id="colorerror"><center><b>Invalid Email id.</h6></center></span>
+                            <span ng-show="Form.password.$error.pattern" id="colorerror"><center><b>Invalid Password</h6></center></span>
 
 
                         </form>

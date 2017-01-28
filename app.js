@@ -1,5 +1,14 @@
+/**
+*@Title :FUNDOO HR APP
+*  @Author: sharad Vanjari
+* @Date :27-10-2017
+* @Purpose : As per user requirement user select number of employee from UI and generate CSV file and store in excel and also generate invoice report and attendance report.
+*/
+/** configure deffedencies */
  angular.module("fundooHrApp", ['ui.router', 'ngMaterial', 'ngAnimate', 'ngAria', 'ngMessages', 'satellizer', 'toastr','LocalStorageModule'])
+/** configure existing services */
      .config(function($stateProvider, $urlRouterProvider, $httpProvider, $authProvider) {
+       /** Function for authontication if disabled user can login without password and user name*/
          var skipIfLoggedIn = ['$q', '$auth', function($q, $auth) {
              var deferred = $q.defer();
              if ($auth.isAuthenticated()){
@@ -9,7 +18,7 @@
              }
              return deferred.promise;
          }];
-
+// loginRequired function will check for token.
          var loginRequired = ['$q', '$location', '$auth', function($q, $location, $auth) {
              var deferred = $q.defer();
              if ($auth.isAuthenticated()) {
@@ -19,22 +28,22 @@
              }
              return deferred.promise;
          }];
-         $urlRouterProvider.otherwise('/');
+         $urlRouterProvider.otherwise('/');//Default state
          $stateProvider
-             .state('login', {
+             .state('login', { //Login state
                  url: '/login',
                  templateUrl: 'templates/login.html',
                  controller: 'loginController',
                  resolve: {
-                     skipIfLoggedIn: skipIfLoggedIn
+                     skipIfLoggedIn: skipIfLoggedIn //Require for login authothication.
                  }
              })
-             .state('logout', {
+             .state('logout', { //logout state
                  url: '/logout',
                  template: null,
                  controller: 'logoutController'
              })
-             .state('home', {
+             .state('home', {// Home state
                  url: '/',
                  templateUrl: 'templates/navbar.html',
                  controller: 'homeController',
@@ -43,7 +52,7 @@
                  }
              })
 
-         .state('home.dashboard',{
+         .state('home.dashboard',{ //Dashboard state
                  url: 'dashboard',
                  templateUrl: 'templates/cards.html',
                  controller: 'DashCtrl',
@@ -51,7 +60,7 @@
                      loginRequired: loginRequired
                  }
              })
-             .state('home.report', {
+             .state('home.report', { //Report state
                  url: 'report',
                  templateUrl: 'templates/reportcards.html',
                  controller: 'reportCtrl',
@@ -59,7 +68,7 @@
                      loginRequired: loginRequired
                  }
              })
-             .state('home.payslip', {
+             .state('home.payslip', { // SallarySlip state
                  url: 'salary',
                  templateUrl: 'templates/salpayslip.html',
                  controller: 'selectAll',
@@ -68,7 +77,7 @@
                  }
              })
 
-         .state('home.attReport', {
+         .state('home.attReport', { // Attandance state
                  url: 'attReport',
                  templateUrl: 'templates/attendancereport.html',
                  controller: 'AttCtrl',
@@ -76,7 +85,7 @@
                      loginRequired: loginRequired
                  }
              })
-             .state('home.invoiceReport', {
+             .state('home.invoiceReport', { // Invoice Report state
                  url: 'invoiceReport',
                  templateUrl: 'templates/invoicereport.html',
                  controller: 'AttinCtrl',
@@ -84,7 +93,7 @@
                      loginRequired: loginRequired
                  }
              })
-             .state('home.next', {
+             .state('home.next', { // Next state for downloading  invoiceReport
                  url: 'attInvoice',
                  templateUrl: 'templates/nextpage.html',
                  controller: 'nextPageCtrl',
@@ -92,7 +101,7 @@
                      loginRequired: loginRequired
                  }
              })
-             .state('home.zip', {
+             .state('home.zip', { //zip state
                  url: 'invoiceReport/Invoicezip',
                  templateUrl: 'templates/invocezip.html',
                  controller: 'invoceCtrl',
