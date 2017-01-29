@@ -5,10 +5,10 @@ angular.module('fundooHrApp').controller('loginController', function($scope, $st
     // Regular expresion for pattern matching ie password pattern;
     $scope.passre = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
 
-//post API call for validation of password and emailid.
+    //post API call for validation of password and emailid.
     var config = {
         method: 'POST',
-        url: 'http://192.168.0.6:3000/login'
+        url: 'http://192.168.0.2:3000/login'
     };
     $scope.login = function() {
         $scope.loginLoading = true;
@@ -16,8 +16,6 @@ angular.module('fundooHrApp').controller('loginController', function($scope, $st
             .then(function(data) {
                 console.log("You have successfully signed in!")
                 $state.go('home'); //after login page navbar page is redirected...
-                // $location.path('/');
-
             })
             .catch(function(error) {
                 console.log(error.data.message, error.status);
@@ -28,14 +26,14 @@ angular.module('fundooHrApp').controller('loginController', function($scope, $st
         $auth.authenticate(provider)
             .then(function() {
                 console.log("You have successfully signed in!" + provider + "!");
-                $state.go('home.dashboard'); //after login page,authentication, navbar page is redirected...
+                $state.go('home.dashboard'); /**after login page,authentication, navbar page is redirected...*/
             })
             .catch(function(error) {
                 if (error.message) {
-                    // Satellizer promise reject error.
+                    /** Satellizer promise reject error.*/
                     console.log(error.message);
                 } else if (error.data) {
-                    // HTTP response error from server
+                    /**HTTP response error from server */
                     console.log(error.data.message, error.status);
                 } else {
                     console.log(error);

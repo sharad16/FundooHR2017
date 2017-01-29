@@ -5,7 +5,7 @@ angular.module('fundooHrApp').controller("AttinCtrl", function($scope, $http,loc
         // console.log(newval, old);
         // localStorage.setItem('value','key');
     // })
-    var  token=localStorage.getItem("satellizer_token");
+    var  token=localStorage.getItem('satellizer_token');
     var query={
       token:token
     }

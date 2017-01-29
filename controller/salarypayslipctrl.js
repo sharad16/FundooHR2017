@@ -18,9 +18,9 @@ app.controller("selectAll", function($scope, $http, restService, $filter,$timeou
         }).catch(function(error) {
             console.log(error);
         });
-        //fuction for selecting
+        /** fuction for selecting */
     $scope.takeId = function() {
-
+console.log("take id");
         var todayDate = $filter('date')(new Date(), 'MM/dd/yy');
         console.log("sending req", engiId);
         var query = {
@@ -30,6 +30,7 @@ app.controller("selectAll", function($scope, $http, restService, $filter,$timeou
         };
         restService.postRequest('downloadSalaryReport', query)
             .then(function(data, status, headers, config) {
+
                 console.log(data);
                 var anchor = angular.element('<a/>');
                 console.log("anchor" + anchor);
@@ -41,7 +42,7 @@ app.controller("selectAll", function($scope, $http, restService, $filter,$timeou
 
             });
     }
-    //selecting checkboxes..
+    /** selecting checkboxes.. */
     $scope.toggleAll = function(index) {
             // console.log("selecting aall");
             var toggleStatus = $scope.all;
@@ -54,7 +55,7 @@ app.controller("selectAll", function($scope, $http, restService, $filter,$timeou
                 return item.selected;
             });
         }
-        // selecting & deselecting indivdual checkboxes...
+        /** selecting & deselecting indivdual checkboxes...*/
     var engiId = [];
     $scope.selectedEmp = function(selected, empData) {
 
@@ -70,13 +71,13 @@ app.controller("selectAll", function($scope, $http, restService, $filter,$timeou
             }
             console.log(engiId);
 
-            //enabling button while atleast one checkbox is checked..
+            /** enabling button while atleast one checkbox is checked..*/
             var i = 1;
             $scope.employeesalary.forEach(function(item) {
 
                 if (item.selected === true) {
                     $scope.checkboxValid = true;
-                    return; //terminates foreach..
+                    return;
                 } else {
                     if ($scope.employeesalary.length === i) {
                         $scope.checkboxValid = false;
@@ -85,7 +86,7 @@ app.controller("selectAll", function($scope, $http, restService, $filter,$timeou
                 }
             });
         }
-        //selectinin all
+        /** selectinin all */
     var alldata = [];
     $scope.selectedAllEmp = function(employeesalary) {
             console.log("calling1...");
@@ -112,10 +113,9 @@ app.controller("selectAll", function($scope, $http, restService, $filter,$timeou
 
       var tcDate = $filter('date')(new Date(), 'MM/dd/yy');
 
-        $scope.fileName=tcDate + "EngineerData.csv"
-        $scope.image = 'images/download.png';
-        $scope.showImg=true;
-        $scope.Message = "Click on the above icon to download";
+        // $scope.fileName=tcDate + "EngineerData.csv"
+        $scope.image1 = 'images/download.png';
+          $scope.Message = "Click on the above icon to download";
       },1000)
 
     }

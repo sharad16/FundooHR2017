@@ -1,41 +1,45 @@
-// restServices rest call with baseurl
-angular.module('fundooHrApp').service('restService', function ($http, $log, $q) {
-   var baseUrl = "http://192.168.0.6:3000/";
-   //    function for GET
-   this.getRequest = function (path, query) {
+/** rest call with base url */
+angular.module("fundooHrApp").service('restService', function($q, $log, $http) {
+    var baseUrl = "http://192.168.0.2:3000/";
+    var token = localStorage.getItem("satellizer_token");
+    /** getting data*/
+    this.getRequest = function(path, query) {
+        var deferred = $q.defer();
+        console.log(query);
+        $http({
+                method: "GET",
+                url: baseUrl + path,
+                headers: {
+                    'x-token': token
+                },
+                params: query
+            }).then(function(data) {
+                deferred.resolve(data);
+            }),
+            function(msg, code) {
+                deferred.reject(msg);
+                $log.error(msg, code);
+            };
+        return deferred.promise;
+    };
+    /** function to POST */
+    this.postRequest = function(path, query) {
+        var deferred = $q.defer();
+        $http({
+                method: "POST",
+                url: baseUrl + path,
+                headers: {
+                    'x-token': token
+                },
+                data: query
+            }).then(function(data) {
+                deferred.resolve(data);
+            }),
+            function(msg, code) {
+                deferred.reject(msg);
+                $log.error(msg, code);
+            };
+        return deferred.promise;
+    };
 
-       var deferred = $q.defer();
-       // console.log(query)
-       $http({
-           method: "GET",
-           url: baseUrl + path,
-           params: query
-
-       }).then(function (data) {
-           //sending data...
-           deferred.resolve(data);
-       }), function (msg, code) {
-           deferred.reject(msg);
-
-           $log.error(msg, code);
-       };
-       return deferred.promise;
-   };
-
-    //  function to POST
-       this.postRequest = function (path,query) {
-         var deferred = $q.defer();
-
-         $http ({
-           method:"POST",
-           url:baseUrl + path,
-           data:query
-         }).then(function(data) {
-           deferred.resolve(data);
-         }),function(msg,code) {
-           deferred.reject(msg);
-           $log.error(msg,code);
-         };
-         return deferred.promise;
-       };
- });
+});

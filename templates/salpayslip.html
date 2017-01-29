@@ -21,11 +21,12 @@
         <div class="inp"><input type="checkbox" ng-model="all" ng-click="toggleAll()">Select All</input>
         </div>
         <button class="disable" ng-class="{'enable':checkboxValid}" ng-disabled="!checkboxValid" ng-click="dispFile()">Generate</button>
-    <div class="Clicking" ng-bind="fileName" id="width12">
-        <a href="#"><img ng-click="takeId()" ng-show="showImg" class="payslip_image" ng-src="{{image}}" /></a>
+        <a href="#"><img ng-click="takeId()" class="payslip_image" ng-src="{{image1}}" /></a>
+      </div>
+       <!-- <div class="Clicking" ng-bind="Message"></div> -->
+      <div class="Clicking" ng-bind="fileName">
         &nbsp
 
-        <div class="Clicking" ng-bind="Message"></div></div>
 
 </div>
 <div ui-view></div>
