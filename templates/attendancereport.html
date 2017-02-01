@@ -2,7 +2,7 @@
     <h6 class="Attendance-Report">Attendance Report</h6>
     <div><span class="num">30/70</span>&nbsp<span class="Internship">Internship</span></div>
 </div>
-<div class="card">
+<div class="card" id="attacard">
     <div id="main" class="col-md-6 col-lg-4 col-xs-12" ng-repeat="(key,value) in CompanyList track by $index">
         <div class="cmp"><input type="checkbox" ng-model="value.selected" ng-checked="allCompany" ng-change="toggleAll($index)">
             <span class="span">{{value.company}}</span></div>
@@ -11,7 +11,7 @@
                 <tr ng-repeat="(k,x) in value.employeeList">
                     <td width="15%"><input type="checkbox" ng-model="x.selected" ng-checked="allCompany" ng-change="optionToggled($index)" />&nbsp &nbsp&nbsp{{x.employeeName}}
                     </td>
-                    <td class="Leave" align=bottom; width="20%" ng-style="{color:(x.employeeLeave >2 ?'red':'green')}">({{x.employeeLeave + "Leaves"}})</td>
+                    <td class="Leave" align=bottom; width="20%" ng-style="{color:(x.employeeLeave >2 ?'red':'green')}">{{x.employeeLeave + "Leaves"}}</td>
                 </tr>
               </table>
         </div>

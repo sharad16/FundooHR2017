@@ -1,4 +1,4 @@
-
+<div>
 <nav id="navmain1" class="navbar navbar-default navbar-static-top" style="background-color:#D8D1C7;">
     <div class="container">
 
@@ -38,13 +38,13 @@
                 </li>
             </ul>
             <div class="row nav-bar-margin" >
- <!-- style="margin-left: 70px;margin-right: 50px;" -->
+
                 <ul class="nav navbar-nav " style="margin-left: -5px;" id="nav-content">
-                    <li ng-class="{'active':(nav==='dash')}"><a ui-sref="home.dashboard" ng-click="nav='dash'">DashBoards</a></li>
-                    <li ng-class="{'active':(nav==='engg')}"><a ui-sref="home.engineer" ng-click="nav='engg'">Engineers</a></li>
-                    <li ng-class="{'active':(nav==='Att')}"><a ng-click="nav='Att'">Attendence</a></li>
-                    <li ng-class="{'active':(nav==='clie')}"><a ng-click="nav='clie'">Clients</a></li>
-                    <li ng-class="{'active':(nav==='repo')}"><a ui-sref="home.report"ng-click="nav='repo'">Report</a></li>
+                    <li  ng-class="{'active':(nav==='dash')}"><a class ="collid" ui-sref="home.dashboard" ng-click="nav='dash'">DashBoards</a></li>
+                    <li ng-class="{'active':(nav==='engg')}"><a  class ="collid" ui-sref="home.engineer" ng-click="nav='engg'">Engineers</a></li>
+                    <li ng-class="{'active':(nav==='Att')}"><a  class ="collid" hidden=""ng-click="nav='Att'">Attendence</a></li>
+                    <li ng-class="{'active':(nav==='clie')}"><a  class ="collid" ng-click="nav='clie'">Clients</a></li>
+                    <li ng-class="{'active':(nav==='repo')}"><a  class ="collid" ui-sref="home.report"ng-click="nav='repo'">Report</a></li>
                 </ul>
             </div>
         </div>
@@ -54,3 +54,4 @@
     <!-- /.container-fluid -->
 </nav>
 <ui-view></ui-view>
+</div>

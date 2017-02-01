@@ -1,3 +1,4 @@
+
     //navbar css
 @media screen and (max-width: 320px) {
     .login {
@@ -22,7 +23,12 @@
         display: table-cell;
     }
 }
-
+@media only screen and (min-device-width: 768px) and (max-device-width: 2560px)
+{
+  div.gene {
+    margin-left: 40%;
+}
+}
 .nav-brand {
     opacity: 100;
     text-align: left;
@@ -104,7 +110,7 @@
 
 .navbar {
     position: relative;
-    border: 1px solid;
+    /*border: 1px solid;*/
     box-shadow: 1px 1px 5px 1px grey;
     /*background-color:#D8D1C7*/
 }
@@ -115,6 +121,7 @@
 }
 
 //login css
+
 body.login-page {
     background-color: #D8D1C7;
     background-size: initial;
@@ -204,8 +211,8 @@ body {
     font-size: 18px;
     color: rgba(59, 83, 114, 1);
 }
-
-.login form button {
+    margin-top: 8px;
+    border-radius: 5px;
     margin-top: 8px;
     border-radius: 5px;
     margin-left: 93.5px;
@@ -231,14 +238,14 @@ body {
 }
 
 .header {
-    padding-left: 19px;
+    padding-left: 19px;login-box
     padding-right: 21px;
 }
 
 .salarydata {
     margin-top: 200px;
     /*margin-left:300px;*/
-    margin-left: 20%;
+    margin-left: -200px;
 }
 
 @media(max-width:360px;
@@ -262,20 +269,6 @@ body {
     margin-top: 30px;
 }
 
-button {
-    margin-left: 20%;
-    font: inherit;
-    color: inherit;
-    background-color: lightblue;
-    width: 188px;
-    height: 53px;
-    border-radius: 5px;
-    opacity: 100;
-    display: inherit;
-}
-
-
-}
 .glyphicon-time:before {
     color: rgba(59, 83, 114, 1);
 }
@@ -289,6 +282,7 @@ button {
     height: 222px;
     border-radius: 8px;
     opacity: 100;
+    margin-top: -8%;
     background-color: #FFFFFF;
     border: solid 2px #9CCDE3;
     box-shadow: 0px 2px 4px 0px grey;
@@ -324,11 +318,10 @@ button {
     width: 307px;
     height: 230px;
     border-radius: 4px;
+    /*margin-left: 50px;*/
     opacity: 100;
     box-shadow: 10px;
     box-shadow: 1px 1px 1px 1px grey;
-}
-
 }
 .main1 {
     height: inherit;
@@ -346,8 +339,368 @@ button {
     line-height: 0px;
     font-size: 28px;
     letter-spacing: 0px;
-    margin-top:30px;
+    margin-top:-120px;
 }
+/**InvoiceReport css */
+.center {
+
+    width: 1000px;
+    height: 1000px;
+
+}
+
+body {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+div.left {
+    margin-left:30%;
+}
+
+table, th, td {Clicking
+    border: 0px solid black;
+    /*margin-right: -70px;*/
+}
+
+table {
+    border-collapse: collapse;
+}
+
+#input {
+    width: 21px;
+    height: 21px;
+    border-radius: 5px;
+    opacity: 100;
+    border: solid 1px #979797;
+}
+
+  .td {
+    color: rgba(59, 83, 114, 1);
+    font-family: Applegothic;
+}
+
+
+tr, td {
+    height: 35px;
+}
+
+.division {
+    width: 810px;
+    height: 352px;
+    opacity: 100;
+    border: solid 1px #FFFFFF;
+}
+
+.Select-All {
+    color: rgba(59, 83, 114, 1);
+    font-family: Applegothic;
+}
+img.pr {
+
+    max-width: 40px;
+    max-height: 50px;
+    opacity: 100;
+    color: #3B5372;
+    font-family: material;
+    line-height: 0px;
+    font-size: 30px;
+    letter-spacing: 0px;
+    margin-left: 0px;
+    /*margin-bottom: 6px;*/
+    display: inline-block;
+    margin-left: -145%;
+    margin-top: -40px;
+}
+img.pr1 {
+    max-width: 40px;
+    max-height: 50px;
+    opacity: 100;
+    text-align: left;
+    color: #3B5372;
+    font-family: material;
+    line-height: 0px;
+    font-size: 30px;
+    letter-spacing: 0px;
+    margin-left: 0px;
+    margin-bottom: 55px;
+    display: inline-block;
+}
+
+h6.pr1 {
+  margin-left: -130%;
+    margin-top: -85px;
+    font-size: 20px;
+
+}
+h6.pr2 {
+    margin-left: 40px;
+    margin-top: -85px;
+    font-size: 20px;
+}
+
+@media (min-width: 725px) {
+ .button.Generate {
+   margin-left: 100px;
+   width:70%;
+ }}
+ @media (max-width: 724px) {
+   .button.Generate {
+     margin-left: 0px;
+     width:100%;
+   }}
+@media (max-width:401px) {
+  {
+  margin-top: 20px;
+    margin-left: 15%;
+    width: 70%;
+    opacity: 100;
+    text-align: center;
+    color: #94999B;
+    font-family: AppleGothic;
+    line-height: 35px;
+    font-size: 20px;
+    letter-spacing: 0px;
+
+}
+}
+
+td.Leave {
+    margin-left: 30px;
+}
+
+.Attendance-Report {
+    height: 34px;
+    opacity: 100;
+    text-align: left;
+    color: #3B5372;
+    font-family: AppleGothic;
+    line-height: 0px;
+    font-size: 28px;
+    letter-spacing: 0px;
+    /*margin-top: -40px;*/
+    margin-left: 30px;
+}
+
+div.Clicking-on-the-gene {
+  width: 75%;
+  height: 10%;
+  opacity: 100;
+  text-align: center;
+  color: #94999B;
+  font-family: AppleGothic;
+  line-height: 5%;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 15%;
+  letter-spacing: 0px;
+}
+#invoicolor{
+  color: black;
+}
+
+.AR {
+    margin-top: 200px;
+}
+
+p.click {
+  margin-top: 20px;
+  margin-left: 18%;
+  width: 70%;
+  opacity: 100;
+  text-align: center;
+  color: #94999B;
+  font-family: AppleGothic;
+  line-height: 35px;
+  font-size: 20px;
+  letter-spacing: 0px;
+}
+
+h6.files {
+    opacity: 100;
+    text-align: center;
+    color: #3498db;
+    font-family: AppleGothic;
+    line-height: 35px;
+    font-size: 20px;
+    letter-spacing: 0px;
+    margin-left: -20px;
+}
+
+  .invdownload {
+    height: 10%;
+    width: 10%;
+    margin-left: 42%;
+  }
+
+
+
+button.enable {
+
+    background-color: #6FB8D9;
+
+    height: 53px;
+    border-radius: 5px;
+
+}
+
+button {
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    background-color: lightblue;
+    /*width: 188px;*/
+    height: 53px;
+    border-radius: 5px;
+    opacity: 100;
+    width: 20%;
+
+    margin-left: 20%;
+    display: inherit;
+}
+
+
+
+.inp {
+    margin-bottom: 50px;
+    font-size: 20px;
+    color: rgba(59, 83, 114, 1);
+    margin-top: -10px;
+    margin-left: 210px;
+}
+
+h6.attheader {
+    display: inline-block;
+    text-align: center;p.click
+    margin-top: 40px;
+    width: 70%;
+    font-size: 20px;
+    color: #6FB8D9;
+    font-weight: bold;
+
+}
+img.payslip_image{
+    margin-left: -120px;
+    margin-top: 120px;
+
+    width: 42px;
+    /*height: 48px;*/
+}
+@media only screen and (max-width: 412px) {
+  row {
+  margin-left: 0px;
+}
+}
+
+.InvoiceReport
+{
+  height: 34px;
+  opacity: 100;
+  text-align: left;
+  color: #3B5372;
+  font-family: AppleGothic;
+  line-height: 0px;
+  font-size: 28px;
+  letter-spacing: 0px;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+/** end*/
+/**Attendance-zip css */
+
+button.Generate{
+height: 8%;
+
+      max-width: 20%;
+      max-height: 8%;
+      opacity: 100;
+      background-color: #6FB8D9;
+      margin-top: 15%;
+      margin-right: 100%;
+      margin-left: 42%;
+
+}
+@media only screen and (min-device-width: 412px) and (max-device-width: 768px)
+{
+    button.Generate{
+    margin-top: 60%;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
+{
+    button.Generate{
+    margin-top: 30%;
+  }
+}
+@media only screen and (min-device-width: 412px) and (max-device-width: 414px)
+{
+div.gene {
+    margin-left: 30px;
+  }
+}
+
+button.Generate:hover {
+    border-color: grey;
+}
+div.Previous{
+    max-width:40px;
+    max-height:50px;
+    opacity: 100;
+    text-align: left;
+    color: #3B5372;
+    font-family: material;
+    line-height: 0px;
+    font-size: 30px;
+    letter-spacing: 0px;
+    margin-bottom:-315px;
+
+}
+.Attendance-Report1 {
+    height: 34px;
+    opacity: 100;
+    text-align: left;
+    color: #3B5372;
+    font-family: AppleGothic;
+    line-height: 0px;
+    font-size: 28px;
+    letter-spacing: 0px;
+    margin-top: 24px;
+    margin-left: 29px;
+}
+@media(max-width:401)
+{
+  {
+    margin-top: 10%;
+margin-left: 18%;
+width: 70%;
+opacity: 100;
+text-align: center;
+color: #94999B;
+font-family: AppleGothic;
+line-height: 35px;
+font-size: 20px;
+letter-spacing: 0px;
+margin-right: -200%;
+  }
+}
+@media(max-widht:401px;)
+{
+  {
+    margin-top: 10%;
+margin-left: 18%;
+width: 70%;
+opacity: 100;
+text-align: center;
+color: #94999B;
+font-family: AppleGothic;
+line-height: 35px;
+font-size: 20px;
+letter-spacing: 0px;
+  }
+}
+
+
+/**end */
 #InvoiceZip {
     width: 241px;
     height: 34px;
@@ -368,19 +721,7 @@ button {
     margin-left: -15px;
     color:#FFFFFF;
 }
-h6 {
-    width: 173px;
-    height: 84px;
-    opacity: 100;
-    text-align: center;
-    color: #6FB8D9;
-    font-family: LucidaGrande-Bold;
-    font-size: 24px;
-    letter-spacing: 0px;
-    margin-left: 30px;
-    margin-top: 50px;
-    font-weight: bold;
-}
+
 span.num {
     width: 67px;
     height: 31px;
@@ -447,7 +788,7 @@ span.employee ng-binding {
     font-size: 18px;
     margin-left: 70px;
 }
-h2 {
+/*h2 {
     text-align: left;
     color: #3B5372;
     font-family: AppleGothic;
@@ -459,7 +800,7 @@ h2 {
     /* font-weight: 300; */
     margin-top: -30%;
     margin-left: -40px;
-}
+}*/
 
 }
 img.pr {
@@ -478,43 +819,6 @@ img.pr {
     box-shadow: 0px 2px 4px 0px grey;
     margin-top: 80px;
 }
-h2 {
-    text-align: left;
-    color: #3B5372;
-    font-family: AppleGothic;
-    line-height: 0px;
-    font-size: 28px;
-    letter-spacing: 0px;
-    margin-left: -5px;
-    margin-top: -30%;
-}
-h2 {
-    text-align: left;
-    color: #3B5372;
-    font-family: AppleGothic;
-    line-height: 0px;
-    font-size: 28px;
-    letter-spacing: 0px;
-    /* margin-left: -8px; */
-    margin-left: -5px;
-    /* font-weight: 300; */
-    margin-top: -30%;
-    margin-left: -40px;
-}
-
-/*{
-  width: 187px;
-height: 21px;
-opacity: 100;
-text-align: left;
-color: #6FB8D9;
-font-family: LucidaGrande-Bold;
-line-height: 0px;
-font-size: 18px;
-margin-left: 70px;
-letter-spacing: 0px;
-margin-top: 120px;
-}*/
 .date2 {
     opacity: 100;
     text-align: left;
@@ -587,23 +891,29 @@ body {
     background-color: rgba(255, 255, 255, 1);
 }
 h6.repheader {
-    width: 173px;
+  width: 173px;
     height: 84px;
     opacity: 100;
     text-align: center;
     color: #6FB8D9;
-    font-family: LucidaGrande-Bold;
-    font-size: 24px;
-    letter-spacing: 0px;
-    margin-left: 30px;
-    margin-top: 50px;
-    font-weight: bold;
-}
+    font-size: 25;
+    margin-top: 20%;
+  }
+
 table, th, td {
     border: 0px solid black;
 }
 td {
     width: 100%;
+}
+# rowid {
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-top: -10%;
+}
+#paddid{
+  padding-top: 10%;
+
 }
 table {
     border-collapse: collapse;
@@ -615,19 +925,8 @@ table {
     opacity: 100;
     border: solid 1px #979797;
 }
-h2 {
-    width: 269px;
-    height: 34px;
-    opacity: 100;
-    text-align: left;
-    color: #3B5372;
-    font-family: AppleGothic;
-    line-height: 0px;
-    font-size: 28px;
-    letter-spacing: 0px;
-    margin-left: -8px;
-    font-weight: 300;
-    margin-top: -10%;
+#loginid{
+  margin-top: 20%;
 }
 .td {
     color: rgba(59, 83, 114, 1);
@@ -636,7 +935,7 @@ h2 {
 @media screen and (max-width: 640px) {
     tr, td {
         width: 0%;
-        padding-left: 20;
+        /*padding-left: 20;*/
     }
 }
 @media screen and (max-width: 320px) {
@@ -657,24 +956,12 @@ h2 {
         margin-left:-20%;
     }
 }
-@media screen and (max-width: 360px) {
-    h2 {
-        margin-left:-40%;
-    }
-}
+
 @media screen and (max-width: 768px) {
     tr, td {
         width: 0%;
     }
-    h2 {
-        width: 269px;
-        height: 34px;
-        opacity: 100;
-        font-family: AppleGothic;
-        line-height: 0px;
-        font-size: 28px;
-        margin-left: -90px;
-    }
+
 }
 td.tdata {
     height:30px;
@@ -683,27 +970,77 @@ td.tdata {
 .tabScroll {
     overflow:auto;
     overflow-x: hidden;
-    width: 600px;
+    width: 60%;
     height: 200px;
+}
+@media (max-width: 767px) {
+  .tabScroll{
+    width:100%;
+  }
 }
 td.tdata1 {
     height: 30px;
     font-size: 16px;
     width: 190px;
 }
-@media screen and (max-width: 414px) {
-    h2 {
-        text-align: left;
-        color: #3B5372;
-        font-family: AppleGothic;
-        line-height: 0px;
-        font-size: 28px;
-        letter-spacing: 0px;
-        margin-left: -8px;
-        font-weight: 300;
-        margin-top: -30%;
-    }
+
+@media(min-width:360px){
+.navbar-toggle {
+       margin-right: 55px;
+
+  }
 }
+@media(max-width:360)
+{
+  div.left {
+    margin-left: 190px;
+}
+}
+.row{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-top: -10px !important;
+}
+@media only screen and (min-device-width: 412px) and (max-device-width: 1024px)
+{
+  .row{
+    margin-left: 20px !important;
+  }
+}
+@media only screen and (min-device-width: 412px) and (max-device-width: 1024px)
+{
+#attacard{
+  margin-left: 35px;
+
+}
+}
+@media only screen and (min-device-width: 412px) and (max-device-width: 414px)
+{
+  #reportcard{
+    margin-left:13%;
+
+  }
+}
+@media only screen and (min-device-width: 412px) and (max-device-width: 414px)
+{
+  #invoicecard{
+    margin-left:13%;
+
+  }
+}
+@media only screen and (min-device-width: 412px) and (max-device-width: 414px)
+{
+  #loginid{
+      margin-left: -20px;
+    margin-top: 20px;
+  }
+}
+@media only screen and (min-device-width: 412px) and (max-device-width: 414px){
+  button{
+    margin-top: 20%
+  }
+}
+
 .division {
     width: 810px;
     height: 352px;
@@ -742,7 +1079,7 @@ img.pr1 {
     font-size: 30px;
     20px letter-spacing: 0px;
     margin-left: 0px;
-    margin-bottom: 55px;
+    /*margin-bottom: 55px;*/
     display: inline-block;
 }
 h6.pr1 {
@@ -845,6 +1182,12 @@ h6.pr2 {
             font-size: 20px;
             letter-spacing: 0px;
         }
+        #fileid{
+          margin-left:30%;"
+        }
+        #primg{
+          margin-left: 45%;
+        }
         @media(max-width:360px) {
             h6.file {
                 margin-left: 0%;
@@ -885,7 +1228,7 @@ h6.pr2 {
             margin-top:20px;
             width: 42px;
             height: 48px;
-            */
+
         }
         div.gene {
             width: 724px;
@@ -940,9 +1283,9 @@ h6.pr2 {
             margin-top: 0px;
             display: table;
         }
-        .movefiles {
+        /*.movefiles {
             margin-left:-40px;
-        }
+        }*/
         div.gene {
             padding-left: 30px;
         }
@@ -1037,8 +1380,8 @@ h6.pr2 {
     opacity:100;
 }
 img.payslip_image {
-    margin-left: 28%;
-    margin-top: 20px;
+  margin-left: 28%;
+    margin-top: 2%;
     width: 42px;
 }
 div.Clicking {
@@ -1050,11 +1393,11 @@ div.Clicking {
     font-family: AppleGothic;
     line-height: 35px;
     font-size: 18px;
-    marg
+    margin-left: -8%;
 }
 @media screen and(max-width:412px) {
     img.payslip_image {
-        margin-left: 37%;
+        margin-left: 37%;Invoice-Report
         margin-top: 20px;
         width: 42px;
     }
@@ -1074,6 +1417,24 @@ div.Select-All {
     margin-top: 50px;
     margin-right: 0px;
     margin-left: 3px;
+}
+@media screen and(max-width:1024px) {
+  p {
+      margin: 0 0 10px;
+      margin-left: 20% !important;
+  }
+}
+@media screen and(max-width:412px) {
+  button {
+
+      margin-left: 45%;
+  }
+}
+@media screen and(max-width:414px)
+{
+  .row {
+    margin-left: 20px !important;
+  }
 }
 .Select-All {
     font-size: 20px;
@@ -1099,29 +1460,32 @@ div.gene {
   line-height: 35px;
   font-size: 22px;
   letter-spacing: 0px;
-  margin-left: 40%;
+  /*margin-left: 40%;*/
   font-weight: bold;
 }
 button.Generate {
-    margin-left: 50px;
+    /*margin-left: 50px;*/
 }
 .image {
-    margin-left: 30px;
+    margin-left: 47%;
 }
 div.Clicking-on-the-gene {
     font-size: 18px;
 }
 h6.pr1 {
-    margin-left: 20px;
+    margin-left:-200%;
     margin-top: 150px;
     font-size: 20px;
     display: -webkit-inline-box;
 }
+/*#invoicolor{
+  color:#6FB8D9;
+}*/
 img.pr {
     max-width: 40px;
-    */ color: #3B5372;
-    margin-left: -300px;
-    margin-top: -32%;
+     color: #3B5372;
+    margin-left: -900px;
+    margin-top: -3%;
     display: inline-block;
 }
 

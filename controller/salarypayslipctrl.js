@@ -1,12 +1,8 @@
+
 var app = angular.module('fundooHrApp');
 app.controller("selectAll", function($scope, $http, restService, $filter,$timeout) {
-
-    //fetching data by making rest servic call
-    var key = localStorage.getItem("satellizer_token");
-    var query = {
-        token: key
-    };
-    restService.getRequest('readAllEmployee', query)
+/** Calling restService for http GET */
+    restService.getRequest('readAllEmployee')
         .then(function(data) {
             $scope.employeesalary = data.data.allEmployee;
 
@@ -22,17 +18,16 @@ app.controller("selectAll", function($scope, $http, restService, $filter,$timeou
     $scope.takeId = function() {
 console.log("take id");
         var todayDate = $filter('date')(new Date(), 'MM/dd/yy');
-        console.log("sending req", engiId);
+
         var query = {
-            token: key,
-            selectedEngineer: ['427188EI', '427188EI']
+            selectedEngineer:$scope.engiAllId
 
         };
+        /** Calling  restService for http post*/
         restService.postRequest('downloadSalaryReport', query)
             .then(function(data, status, headers, config) {
 
-                console.log(data);
-                var anchor = angular.element('<a/>');
+                  var anchor = angular.element('<a/>');
                 console.log("anchor" + anchor);
                 anchor.attr({
                     href: 'data:attachment/csv;charset=utf-8,' + encodeURI(data.data),
@@ -44,7 +39,7 @@ console.log("take id");
     }
     /** selecting checkboxes.. */
     $scope.toggleAll = function(index) {
-            // console.log("selecting aall");
+
             var toggleStatus = $scope.all;
             console.log(toggleStatus);
             angular.forEach($scope.employeesalary, function(itm) {
@@ -87,36 +82,36 @@ console.log("take id");
             });
         }
         /** selectinin all */
-    var alldata = [];
-    $scope.selectedAllEmp = function(employeesalary) {
+    var engiId = [];
+    $scope.selectedAllEmp = function(employeesalary){
+      console.log(employeesalary);
             console.log("calling1...");
 
             if ($scope.all) {
                 for (var j = 0; j < employeesalary.length; j++) {
-                    alldata.push(employeesalary[j].engineerId);
+                    engiId.push(employeesalary[j].engineerId);
                 }
             } else {
                 console.log("removed..");
-                for (var k = 0; k < alldata.length; k++) {
-                    if (alldata[k] === employeesalary[k].engineerId) {
-                        alldata.splice(k, alldata.length);
+                for (var k = 0; k < engiId.length; k++) {
+                    if (engiId[k] === employeesalary[k].engineerId) {
+                        engiId.splice(k, engiId.length);
                     }
                 }
 
             }
-            console.log("all data");
-            console.log(alldata);
+
+            console.log(engiId);
         }
-        //function to display icon when a button is clicked..
+        $scope.engiAllId=engiId;
+        /**function to display icon when a button is clicked..*/
     $scope.dispFile = function() {
  $timeout(function() {
-
-      var tcDate = $filter('date')(new Date(), 'MM/dd/yy');
-
-        // $scope.fileName=tcDate + "EngineerData.csv"
+    var tcDate = $filter('date')(new Date(), 'MM/dd/yy');
         $scope.image1 = 'images/download.png';
+        $scope.fileName=tcDate+'EngineerData.csv'
           $scope.Message = "Click on the above icon to download";
-      },1000)
+      },1000)/** time delay in miliseconds*/
 
     }
 });

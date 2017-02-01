@@ -1,27 +1,22 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <div ng-controller="invoceCtrl">
-    <h6 id="InvoiceZip">Invoice-Report</h6>
-    <p class="click">Clicking on the below icon,invoice reports will be downloaded in .xls format</p>
-
-
+    <h6 class="repheader" id="invoicolor">Invoice-Report</h6>
     <div class="file">
-        <table class="movefiles" style="width:100%">
-            <tr ng-repeat="value in Invoicedata">
-                <td align=bottom; width="20%">
-                    <h6 class="files">{{value.filename}}</h6></td>
-
-            </tr>
-        </table>
-        <a><button class="Generatezip" ng-click="download()"><span class="note">Generate</span></button></a>
-
-        <a href="#"><img class="imagezip" ng-src="{{image}}" /></a>
+        <p class="click">Clicking on the below icon,invoice reports will be downloaded in .xls format</p>
+        <div class="table-responsive">
+            <table class="movefiles" style="width:100%">
+                <tr ng-repeat="value in Invoicedata">
+                    <td align=bottom; width="20%">
+                        <h6 class="files">{{value.filename}}</h6></td>
+                </tr>
+            </table>
+        </div>
     </div>
-
-    <a ui-sref="home.invoiceReport">
-        <img class="pr1" src="images/previous.png">
-        </img>
-    </a>
-
-    <a ui-sref="home.invoiceReport">
-        <h6 class="Pr2">Previous</h6></a>
+    <a href=""><img class="invdownload" src="images/download.png" /></a>
+</div>
+<a ui-sref="home.invoiceReport">
+    <img class="pr1" src="images/previous.png" />
+    <h6 class="Pr2">Previous</h6></a>
 
 </div>

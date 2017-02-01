@@ -1,32 +1,21 @@
-<div  class="salarydata">
-    <div class="left">
-        <h2>Salary Payslip Report</h2>
-
-          <div class="tabScroll">
-            <div  ng-repeat="empData in employeesalary track by $index">
-                <table id="padtable">
-                    <tr>
-                      <div>
-                    <td class="tdata"><input type="checkbox" ng-change="selectedEmp(empData.selected,empData)"  ng-model="employeesalary[$index].selected"></td>
-                  </div>
+<div class="container"><!-- salarydata left id="padtable"-->
+        <h2 style="color: rgba(59, 83, 114, 1);">Salary Payslip Report</h2>
+        <div class="tabScroll">
+              <table class="table-responsive">
+                    <tr ng-repeat="empData in employeesalary track by $index">
+                        <td class="tdata"><input type="checkbox" ng-change="selectedEmp(empData.selected,empData)" ng-model="employeesalary[$index].selected"></td>
                         <td class="tdata1" align=bottom;style="overflow:auto;">{{empData.employeeName}}</td>
                         <td class="tdata1" align=bottom;>{{empData.employeeStatus}}</td>
                         <td class="tdata1" id="padtd" align=bottom;>{{empData.company}}</td>
                     </tr>
-                </table>
-            </div>
-          </div>
-
-          </div>
-        <div class="inp"><input type="checkbox" ng-model="all" ng-click="toggleAll()">Select All</input>
+          </table>
         </div>
-        <button class="disable" ng-class="{'enable':checkboxValid}" ng-disabled="!checkboxValid" ng-click="dispFile()">Generate</button>
-        <a href="#"><img ng-click="takeId()" class="payslip_image" ng-src="{{image1}}" /></a>
-      </div>
-       <!-- <div class="Clicking" ng-bind="Message"></div> -->
-      <div class="Clicking" ng-bind="fileName">
+    <div  style="font-size: 20px;color: rgba(59, 83, 114, 1);"><input type="checkbox" ng-model="all" ng-click="toggleAll()" ng-change="selectedAllEmp(employeesalary)">Select All</input>
+    </div>
+    <button class="disable" ng-class="{'enable':checkboxValid}" ng-disabled="!checkboxValid" ng-click="dispFile()">Generate</button>
+  <a href="#"><img ng-click="takeId()" class="payslip_image" ng-src="{{image1}}" /></a>
+  <div class="Clicking" ng-bind="fileName">
         &nbsp
-
-
+    </div>
+    <div ui-view></div>
 </div>
-<div ui-view></div>
