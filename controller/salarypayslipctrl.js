@@ -106,6 +106,7 @@ console.log("take id");
         $scope.engiAllId=engiId;
         /**function to display icon when a button is clicked..*/
     $scope.dispFile = function() {
+      $scope.ImageLoading=true;
  $timeout(function() {
     var tcDate = $filter('date')(new Date(), 'MM/dd/yy');
         $scope.image1 = 'images/download.png';

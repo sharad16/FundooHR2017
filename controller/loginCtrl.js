@@ -8,7 +8,7 @@ angular.module('fundooHrApp').controller('loginController', function($scope, $st
     /**post API call for validation of password and emailid.*/
     var config = {
         method: 'POST',
-        url: 'http://192.168.0.10:3000/login'
+        url: 'http://192.168.0.6:3000/login'
     };
     $scope.login = function() {
         $scope.loginLoading = true;

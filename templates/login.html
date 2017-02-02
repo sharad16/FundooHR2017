@@ -16,7 +16,7 @@
                                 <label>Password</label>
                                 <input type="password" name="password" ng-model="user.password" ng-pattern="passre" required md-no-asterisk />
                             </md-input-container>
-                            <button ng-disabled="!Form.$valid ||loginLoading" type="submit" class="md-raised"> Login </button>
+                            <button ng-disabled="!Form.$valid ||loginLoading" type="submit" class="md-raised"id="loginbutton"> Login </button>
                             <span class="loader">
                              <img ng-if="loginLoading" src="images/loader.gif" width="25px" height="25px" />
                              </span>

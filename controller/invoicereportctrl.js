@@ -6,6 +6,6 @@ angular.module('fundooHrApp').controller("AttinCtrl", function($scope, $http,loc
   {
          console.log($scope.CompanyList = data.data.allEmployee);
          $scope.CompanyList=data.data.allEmployee;
-         console.log("hggjghj");
+
    });
    });

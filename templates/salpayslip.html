@@ -12,9 +12,13 @@
         </div>
     <div  style="font-size: 20px;color: rgba(59, 83, 114, 1);"><input type="checkbox" ng-model="all" ng-click="toggleAll()" ng-change="selectedAllEmp(employeesalary)">Select All</input>
     </div>
-    <button class="disable" ng-class="{'enable':checkboxValid}" ng-disabled="!checkboxValid" ng-click="dispFile()">Generate</button>
-  <a href="#"><img ng-click="takeId()" class="payslip_image" ng-src="{{image1}}" /></a>
-  <div class="Clicking" ng-bind="fileName">
+    <button class="disable" ng-class="{'enable':checkboxValid}" ng-disabled="!checkboxValid||ImageLoading" ng-click="dispFile()">Generate</button>
+<a href="#"><img ng-click="takeId()" class="payslip_image" ng-src="{{image1}}" /></a>
+    <span class="loader">
+     <img ng-if="ImageLoading" src="images/loader.gif" width="25px" height="25px" />
+     </span>
+
+  <!-- <div class="Clicking" ng-bind="fileName"> -->
         &nbsp
     </div>
     <div ui-view></div>
