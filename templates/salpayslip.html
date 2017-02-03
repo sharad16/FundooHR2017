@@ -1,6 +1,6 @@
 <div class="container"><!-- salarydata left id="padtable"-->
         <h2 style="color: rgba(59, 83, 114, 1);">Salary Payslip Report</h2>
-        <div class="tabScroll">
+      <center>  <div class="tabScroll">
               <table class="table-responsive">
                     <tr ng-repeat="empData in employeesalary track by $index">
                         <td class="tdata"><input type="checkbox" ng-change="selectedEmp(empData.selected,empData)" ng-model="employeesalary[$index].selected"></td>
@@ -9,7 +9,7 @@
                         <td class="tdata1" id="padtd" align=bottom;>{{empData.company}}</td>
                     </tr>
           </table>
-        </div>
+        </div></center>
     <div  style="font-size: 20px;color: rgba(59, 83, 114, 1);"><input type="checkbox" ng-model="all" ng-click="toggleAll()" ng-change="selectedAllEmp(employeesalary)">Select All</input>
     </div>
     <button class="disable" ng-class="{'enable':checkboxValid}" ng-disabled="!checkboxValid||ImageLoading" ng-click="dispFile()">Generate</button>

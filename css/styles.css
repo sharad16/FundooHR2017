@@ -433,6 +433,11 @@ h6.pr1 {
     font-size: 20px;
 
 }
+@media only screen and (min-device-width: 412px) and (max-device-width: 1024px){
+  h6.pr2{
+    margin-top: 70%;
+  }
+}
 h6.pr2 {
     margin-left: 40px;
     margin-top: -85px;
@@ -497,6 +502,13 @@ div.Clicking-on-the-gene {
 }
 #invoicolor{
   color: black;
+  margin-left: -28%;
+}
+@media only screen and (min-device-width: 412px) and (max-device-width: 1024px)
+{
+  #invoicolor{
+    margin-left: -16%;
+  }
 }
 
 .AR {
@@ -504,9 +516,17 @@ div.Clicking-on-the-gene {
     margin-left: 9%;
 }
 .primage{
-  margin-top: -4%;
-    width: 3%;
-    height: 3%;
+  max-width: 40px;
+      max-height: 50px;
+      opacity: 100;
+      text-align: left;
+      color: #3B5372;
+      font-family: material;
+      line-height: 0px;
+      font-size: 30px;
+      margin-left: 0px;
+
+      display: inline-block;
 }
 @media only screen and (min-device-width: 412px) and (max-device-width: 414px)
 {
@@ -651,8 +671,8 @@ height: 8%;
 @media only screen and (min-device-width: 412px) and (max-device-width: 414px)
 {
 div.gene {
-    margin-left: 30px;
-    margin-top: 10%;
+    margin-left: 20px;
+    margin-top: 30%;
   }
 }
 @media only screen and (min-device-width: 412px) and (max-device-width: 414px)
@@ -759,14 +779,14 @@ letter-spacing: 0px;
 }
 
 span.num {
-    width: 67px;
-    height: 31px;
-    text-align-last border-radius: 25px;
-    opacity: 100;
-    background-color: #6FB8D9;
-    color:#FFFFFF;
-    margin-left:70px;
-    border-radius:50%;
+  width: 50px;
+    height: 50px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    padding: 8px;
+    margin-left: 15px;
+    border-radius: 50px;
+    background: #6FB8D9;
 }
 .Internship {
     width: 87px;
@@ -929,7 +949,7 @@ body {
     background-color: rgba(255, 255, 255, 1);
 }
 h6.repheader {
-  margin-top: 20%;
+  /*margin-top: 20%;*/
 
     display: inline-block;
     text-align: center;
@@ -974,7 +994,9 @@ table {
 }
 #loginbutton{
   width:40%;
+  margin-left: 30%;
 }
+
 
 #loginid{
   margin-top: 20%;
@@ -1008,9 +1030,9 @@ table {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     tr, td {
-        width: 0%;
+        width: 100%;
     }
 
 }
@@ -1077,6 +1099,9 @@ td.tdata1 {
 
   }
 }
+#reportcard{
+  margin-left: 5%;
+}
 @media only screen and (min-device-width: 412px) and (max-device-width: 414px)
 {
   #invoicecard{
@@ -1109,6 +1134,9 @@ td.tdata1 {
      background-color: #e7e7e7;
      width:100%;
 }
+#invoicecard{
+  margin-left:10%;
+}
 .division {
     width: 810px;
     height: 352px;
@@ -1116,11 +1144,9 @@ td.tdata1 {
     border: solid 1px #FFFFFF;
 }
 div.Select-All {
-    margin-top: 500px;
+    margin-top: 50px;
     margin-right:670px;
     margin-left: 30px;
-}
-
 }
 img.pr {
     max-width: 40px;
@@ -1417,6 +1443,7 @@ h6.pr2 {
     color: #3B5372;
     font-size: 18px;
     font-family: LucidaGrande-Bold;
+        padding-bottom: 7%;
 }
 #nav-content li.active {
     border-bottom: 4px solid rgba(59, 83, 114, 1);
@@ -1489,9 +1516,9 @@ div.Clicking {
     margin-top: -10px;
 }
 div.Select-All {
-    margin-top: 50px;
+    margin-top:-40px;
     margin-right: 0px;
-    margin-left: 3px;
+    margin-left: 10px;
 }
 @media screen and(max-width:1024px) {
   p {
@@ -1516,12 +1543,12 @@ div.Select-All {
     color: rgba(59, 83, 114, 1)
 }
 .next1 {
-    margin-left: 85%;
+    margin-left: 90%;
     height: 43px;
     width: 43px;
   }
 .next {
-    margin-left: 80%;
+    margin-left: 87%;
     width: 43px;
     font-size: 20px;
     margin-top: -28px;
@@ -1529,7 +1556,7 @@ div.Select-All {
 @media only screen and (min-device-width: 412px) and (max-device-width: 1024px)
 {
   .next{
-    margin-left: 75%;
+    margin-left: 80%;
   }
 }
 
@@ -1594,4 +1621,19 @@ img.pr {
             margin-top: -280px;
             padding: 120px;
         }
+    }
+    @@media (min-width:412px) {
+      div.gene {
+        width: 300px;
+        height: 550px;
+        text-align: center;
+        color: #94999B;
+        font-family: AppleGothic;
+        line-height: 35px;
+        font-size: 22px;
+        letter-spacing: 0px;
+        /*margin-left: 40%;*/
+        font-weight: bold;
+      }
+
     }
