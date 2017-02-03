@@ -18,7 +18,7 @@
                             </md-input-container>
                             <button ng-disabled="!Form.$valid ||loginLoading" type="submit" class="md-raised"id="loginbutton"> Login </button>
                             <span class="loader">
-                             <img ng-if="loginLoading" src="images/loader.gif" width="25px" height="25px" />
+                             <img ng-if="loginLoading" src="images/loader.gif" width="25px" height="25px"id="loaderimg" />
                              </span>
                             <span ng-show="Form.email.$error.pattern" id="colorerror"><center><b>Invalid Email id.</h6></center></span>
                             <span ng-show="Form.password.$error.pattern" id="colorerror"><center><b>Invalid Password</h6></center></span>

@@ -66,7 +66,9 @@
     font-size: 16px;
     letter-spacing: 0px;
 }
-
+#loaderimg{
+  margin-left: 40%;
+}
 #block {
     width: 255px;
     height: 73px;
@@ -323,10 +325,10 @@ body {
     box-shadow: 10px;
     box-shadow: 1px 1px 1px 1px grey;
 }
-.main1 {
+/*.main1 {
     height: inherit;
     overflow: auto;
-}
+}*/
 #main {
     overflow: hidden;
 }
@@ -531,7 +533,8 @@ div.Clicking-on-the-gene {
 @media only screen and (min-device-width: 412px) and (max-device-width: 414px)
 {
   .primage{
-    margin-top: -20%;
+    margin-top: 14%;
+      margin-left: -35%;
   }
 }
 
@@ -540,14 +543,14 @@ div.Clicking-on-the-gene {
 }
 p.click {
   margin-top: 20px;
-  margin-left: 18%;
+  margin-left: 15%;
   width: 70%;
   opacity: 100;
   text-align: center;
   color: #94999B;
   font-family: AppleGothic;
   line-height: 35px;
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 0px;
 }
 
@@ -621,11 +624,11 @@ img.payslip_image{
     width: 42px;
     /*height: 48px;*/
 }
- only screen and (max-width: 412px) {
+ /*only screen and (max-width: 412px) {
   row {
   margin-left: 0px;
 }
-}
+}*/
 
 .InvoiceReport
 {
@@ -652,7 +655,6 @@ height: 8%;
       opacity: 100;
       background-color: #6FB8D9;
       margin-top: 15%;
-      margin-right: 100%;
       margin-left: 42%;
 
 }
@@ -672,8 +674,7 @@ height: 8%;
 {
 div.gene {
     margin-left: 20px;
-    margin-top: 30%;
-  }
+    }
 }
 @media only screen and (min-device-width: 412px) and (max-device-width: 414px)
 {
@@ -681,7 +682,6 @@ div.gene {
     width: 30%;
     margin-left: 120px;
     }
-
   }
   @media only screen and (min-device-width: 412px) and (max-device-width: 414px)
 {
@@ -754,8 +754,6 @@ font-size: 20px;
 letter-spacing: 0px;
   }
 }
-
-
 /**end */
 #InvoiceZip {
     width: 241px;
@@ -1123,16 +1121,43 @@ td.tdata1 {
     margin-left: 30%;
   }
 }
+#headsall{
+  color: rgba(59, 83, 114, 1);
+  margin-left:20%;"
+}
+@media only screen and (min-device-width: 412px) and (max-device-width: 414px){
+#headsall{
+  margin-left: 1%;
+}
+}
 @media only screen and (min-device-width: 412px) and (max-device-width: 414px)
 {
   .tabScroll{
     height: 50%;
   }
 }
+div#sall {
+  font-size: 20px;
+  color: rgba(59, 83, 114, 1);
+  margin-left:20%;
+}
+@media only screen and (min-device-width: 412px) and (max-device-width: 414px)
+{
+  div#sall{
+    font-size: 20px;
+  color: rgba(59, 83, 114, 1);
+  margin-left: 4%;
+  margin-top: 20px;
+  }
+}
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
     color: #555;
      background-color: #e7e7e7;
      width:100%;
+}
+#page {
+  width: 100%;
+  height: 100%;
 }
 #invoicecard{
   margin-left:10%;
@@ -1482,7 +1507,7 @@ h6.pr2 {
     opacity:100;
 }
 img.payslip_image {
-  margin-left: 28%;
+  margin-left: 47%;
     margin-top: 2%;
     width: 42px;
 }
@@ -1569,12 +1594,8 @@ div.gene {
   line-height: 35px;
   font-size: 22px;
   letter-spacing: 0px;
-  /*margin-left: 40%;*/
-  font-weight: bold;
 }
-button.Generate {
-    /*margin-left: 50px;*/
-}
+
 .image {
     margin-left: 47%;
 }
@@ -1587,9 +1608,7 @@ h6.pr1 {
     font-size: 20px;
     display: -webkit-inline-box;
 }
-/*#invoicolor{
-  color:#6FB8D9;
-}*/
+
 img.pr {
     max-width: 40px;
      color: #3B5372;

@@ -2,6 +2,7 @@
 var app = angular.module('fundooHrApp');
 app.controller("selectAll", function($scope, $http, restService, $filter,$timeout) {
 /** Calling restService for http GET */
+    $scope.ImageLoading=false;
     restService.getRequest('readAllEmployee')
         .then(function(data) {
             $scope.employeesalary = data.data.allEmployee;
@@ -112,6 +113,7 @@ console.log("take id");
         $scope.image1 = 'images/download.png';
         $scope.fileName=tcDate+'EngineerData.csv'
           $scope.Message = "Click on the above icon to download";
+          $scope.ImageLoading=false;  
       },1000)/** time delay in miliseconds*/
 
     }

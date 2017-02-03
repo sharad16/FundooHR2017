@@ -6,15 +6,13 @@
     <div id="main" class="col-md-6 col-lg-4 col-xs-12" ng-repeat="(key,value) in CompanyList track by $index">
         <div class="cmp"><input type="checkbox" ng-model="value.selected" ng-checked="allCompany" ng-change="toggleAll($index)">
             <span class="span">{{value.company}}</span></div>
-        <div id="main1" style="overflow: auto;height: inherit;">
+        <div id="main1" style="overflow: hidden;height: 50%;">
             <table>
                 <tr ng-repeat="(k,x) in value.employeeList">
                     <td width="15%"><input type="checkbox" ng-model="x.selected" ng-checked="allCompany" ng-change="optionToggled($index)" />&nbsp &nbsp&nbsp{{x.employeeName}}
                     </td>
                     <td class="Leave" align=bottom; width="20%" ng-style="{color:(x.employeeLeave >2 ?'red':'green')}">{{x.employeeLeave + "leaves"}}</td>
                 </tr>
-                <!-- <td ng-style="set_color({{payment}})">{{payment.number}}</td> -->
-
             </table>
         </div>
     </div>
@@ -22,6 +20,7 @@
 </div>
 <br><br>
 <!-- <div class="Select-All"><input type="checkbox" class="check" ng-model="allCompany" ng-click="checkAll()"/>Select All</div><br/> -->
-<a ui-sref="home.zip"><img class="next1" src="images/next.png"></img></a>
-    <h6 class="next">Next</h6>
-<div class="Select-All" id="allintern"style="margin-left:10%;"><input type="checkbox" ng-model="allCompany">Select All</div>
+<a ui-sref="home.zip"><img class="next1" src="images/next.png"></img>
+</a>
+<h6 class="next">Next</h6>
+<div class="Select-All" id="allintern" style="margin-left:10%;"><input type="checkbox" ng-model="allCompany">Select All</div>

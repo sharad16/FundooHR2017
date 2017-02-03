@@ -1,19 +1,23 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <div ng-controller="invoceCtrl">
     <h6 class="repheader" id="invoicolor">Invoice-Report</h6>
     <div class="file">
-        <p class="click">Clicking on the below icon,invoice reports will be downloaded in .xls format</p>
-        <div class="table-responsive">
+      <p class="click">Clicking on below button</p>
+        <div><a><button class="Generate" ng-click="go()"id="Attzipgen" style="margin-top:-2px;">
+          <span class="note" >Generate</span>
+        </button></a></div>
+        <a ><img class="image" id="downimg"ng-src="{{image}}" /></a>
+          <div class="Clicking-on-the-gene" ng-bind="Message"></div>
+          <h6 class="files">{{value.filename}}</h6>
+  <!-- <div class="table-responsive">
             <table class="movefiles" style="width:100%">
                 <tr ng-repeat="value in Invoicedata">
-                    <td align=bottom; width="20%">
-                        <h6 class="files">{{value.filename}}</h6></td>
+                    <td align=bottom;>
+                    <h6 class="files">{{value.filename}}</h6></td>
                 </tr>
             </table>
-        </div>
+        </div> -->
     </div>
-    <a href=""><img class="invdownload" src="images/download.png" /></a>
+
 </div>
 <a ui-sref="home.invoiceReport">
     <img class="pr1" src="images/previous.png" /></a>

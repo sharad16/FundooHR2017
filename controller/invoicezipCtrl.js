@@ -6,9 +6,10 @@ angular.module('fundooHrApp').controller("invoceCtrl", function($scope, $http) {
     }).catch(function(error) {
         console.log(error);
     });
-    $scope.download = function(){
-      console.log("in method...");
-  $scope.image ='images/download.png';
-
-    }
+    $scope.go = function()
+    {
+        console.log("in method...");
+        $scope.image ='images/download.png';
+        $scope.Message="meru_invoice.xls";
+      }
 });

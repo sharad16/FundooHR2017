@@ -15,7 +15,7 @@ angular.module('fundooHrApp').controller('loginController', function($scope, $st
         $auth.login($scope.user, config)
             .then(function(data) {
                 console.log("You have successfully signed in!")
-                $state.go('home'); /**after login page navbar page is redirected...*/
+                $state.go('home.dashboard'); /**after login page navbar page is redirected...*/
             })
             .catch(function(error) {
                 console.log(error.data.message, error.status);
