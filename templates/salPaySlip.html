@@ -1,5 +1,4 @@
 <div class="container">
-    <!-- salarydata left id="padtable"-->
     <h2 id="headsall">Salary Payslip Report</h2>
     <center>
         <div class="tabScroll">
@@ -13,15 +12,13 @@
             </table>
         </div>
     </center>
-    <div  id="sall"><input type="checkbox" ng-model="all" ng-click="toggleAll()" ng-change="selectedAllEmp(employeesalary)">Select All</input>
+    <div  id="sall"><input type="checkbox" ng-model="all" ng-click="toggleAll()" ng-change="selectedAllEmp(employeesalary)" id="said">Select All</input>
     </div>
-    <button class="disable" ng-class="{'enable':checkboxValid}" style="margin-left:40%;" ng-disabled="!checkboxValid||ImageLoading" ng-click="dispFile()">Generate</button>
+    <button class="disable" ng-class="{'enable':checkboxValid}" style="margin-left:40%; ng-disabled="!checkboxValid||ImageLoading" ng-click="dispFile()">Generate</button>
     <a><img ng-click="takeId()" class="payslip_image" ng-src="{{image1}}" /></a>
     <span class="loader">
      <img ng-if="ImageLoading" src="images/loader.gif" width="25px" height="25px" />
      </span>
-
-    <!-- <div class="Clicking" ng-bind="fileName"> -->
     &nbsp
 </div>
 <div ui-view></div>

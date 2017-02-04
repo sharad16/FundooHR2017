@@ -39,28 +39,36 @@ console.log("take id");
             });
     }
     /** selecting checkboxes.. */
-    $scope.toggleAll = function(index) {
+    $scope.toggleAll = function(index)
+    {
 
             var toggleStatus = $scope.all;
             console.log(toggleStatus);
-            angular.forEach($scope.employeesalary, function(itm) {
+            angular.forEach($scope.employeesalary, function(itm)
+            {
                 itm.selected = toggleStatus;
 
             });
-            $scope.checkboxValid = $scope.employeesalary.every(function(item) {
+            $scope.checkboxValid = $scope.employeesalary.every(function(item)
+            {
                 return item.selected;
             });
-        }
+      }
         /** selecting & deselecting indivdual checkboxes...*/
     var engiId = [];
-    $scope.selectedEmp = function(selected, empData) {
+    $scope.selectedEmp = function(selected, empData)
+    {
 
             console.log(selected, empData);
-            if (selected) {
+            if (selected)
+            {
                 engiId.push(empData.engineerId);
-            } else {
-                for (var i = 0; i < engiId.length; i++) {
-                    if (engiId[i] === empData.engineerId) {
+            } else
+            {
+                for (var i = 0; i < engiId.length; i++)
+                {
+                    if (engiId[i] === empData.engineerId)
+                    {
                         engiId.splice(i, 1);
                     }
                 }
@@ -69,13 +77,17 @@ console.log("take id");
 
             /** enabling button while atleast one checkbox is checked..*/
             var i = 1;
-            $scope.employeesalary.forEach(function(item) {
+            $scope.employeesalary.forEach(function(item)
+            {
 
-                if (item.selected === true) {
+                if (item.selected === true)
+                {
                     $scope.checkboxValid = true;
                     return;
-                } else {
-                    if ($scope.employeesalary.length === i) {
+                } else
+                {
+                    if ($scope.employeesalary.length === i)
+                    {
                         $scope.checkboxValid = false;
                     }
                     i++;
@@ -84,18 +96,23 @@ console.log("take id");
         }
         /** selectinin all */
     var engiId = [];
-    $scope.selectedAllEmp = function(employeesalary){
+    $scope.selectedAllEmp = function(employeesalary)
+    {
       console.log(employeesalary);
             console.log("calling1...");
 
-            if ($scope.all) {
-                for (var j = 0; j < employeesalary.length; j++) {
+            if ($scope.all)
+            {
+                for (var j = 0; j < employeesalary.length; j++)
+                {
                     engiId.push(employeesalary[j].engineerId);
-                }
+                 }
             } else {
                 console.log("removed..");
-                for (var k = 0; k < engiId.length; k++) {
-                    if (engiId[k] === employeesalary[k].engineerId) {
+                for (var k = 0; k < engiId.length; k++)
+                {
+                    if (engiId[k] === employeesalary[k].engineerId)
+                    {
                         engiId.splice(k, engiId.length);
                     }
                 }
@@ -106,14 +123,15 @@ console.log("take id");
         }
         $scope.engiAllId=engiId;
         /**function to display icon when a button is clicked..*/
-    $scope.dispFile = function() {
-      $scope.ImageLoading=true;
+    $scope.dispFile = function()
+    {
+ $scope.ImageLoading=true;
  $timeout(function() {
     var tcDate = $filter('date')(new Date(), 'MM/dd/yy');
         $scope.image1 = 'images/download.png';
         $scope.fileName=tcDate+'EngineerData.csv'
           $scope.Message = "Click on the above icon to download";
-          $scope.ImageLoading=false;  
+          $scope.ImageLoading=false;
       },1000)/** time delay in miliseconds*/
 
     }

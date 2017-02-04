@@ -62,7 +62,7 @@
              })
              .state('home.report', { //Report state
                  url: 'report',
-                 templateUrl: 'templates/reportcards.html',
+                 templateUrl: 'templates/reportCards.html',
                  controller: 'reportCtrl',
                  resolve: {
                      loginRequired: loginRequired
@@ -70,7 +70,7 @@
              })
              .state('home.payslip', { // SallarySlip state
                  url: 'salary',
-                 templateUrl: 'templates/salpayslip.html',
+                 templateUrl: 'templates/salPaySlip.html',
                  controller: 'selectAll',
                  resolve: {
                      loginRequired: loginRequired
@@ -79,7 +79,7 @@
 
          .state('home.attReport', { // Attandance state
                  url: 'attReport',
-                 templateUrl: 'templates/attendancereport.html',
+                 templateUrl: 'templates/attendanceReport.html',
                  controller: 'AttCtrl',
                  resolve: {
                      loginRequired: loginRequired
@@ -87,7 +87,7 @@
              })
              .state('home.invoiceReport', { // Invoice Report state
                  url: 'invoiceReport',
-                 templateUrl: 'templates/invoicereport.html',
+                 templateUrl: 'templates/invoiceReport.html',
                  controller: 'AttinCtrl',
                  resolve: {
                      loginRequired: loginRequired
@@ -95,7 +95,7 @@
              })
              .state('home.next', { // Next state for downloading  invoiceReport
                  url: 'attInvoice',
-                 templateUrl: 'templates/nextpage.html',
+                 templateUrl: 'templates/attendanceDownload.html',
                  controller: 'nextPageCtrl',
                  resolve: {
                      loginRequired: loginRequired
@@ -103,7 +103,7 @@
              })
              .state('home.zip', { //zip state
                  url: 'invoiceReport/Invoicezip',
-                 templateUrl: 'templates/invocezip.html',
+                 templateUrl: 'templates/invoceZip.html',
                  controller: 'invoceCtrl',
                  resolve: {
                      loginRequired: loginRequired

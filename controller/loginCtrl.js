@@ -18,7 +18,7 @@ angular.module('fundooHrApp').controller('loginController', function($scope, $st
                 $state.go('home.dashboard'); /**after login page navbar page is redirected...*/
             })
             .catch(function(error) {
-                console.log(error.data.message, error.status);
+                // console.log(error.data.message, error.status);
 
             });
     };

@@ -26,6 +26,7 @@ promise.then(function(data) {
                  itm.selected = toggleStatus;
              });
          }
+
          $scope.checkAll = function() {
              console.log($scope.CompanyList);
          }

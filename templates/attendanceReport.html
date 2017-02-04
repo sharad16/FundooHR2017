@@ -10,7 +10,7 @@
         <div id="main1" style="overflow: hidden;height:50%;">
             <table class="scroll">
                 <tr ng-repeat="(k,x) in value.employeeList">
-                    <td width="15%"><input type="checkbox" ng-model="x.selected" ng-checked="allCompany" ng-change="optionToggled($index)" />{{x.employeeName}}
+                    <td width="15%"><input type="checkbox" ng-model="x.selected" ng-checked="allCompany" ng-change="optionToggled($index)" />&nbsp &nbsp&nbsp{{x.employeeName}}
                     </td>
                     <td class="Leave" align=bottom; width="20%" ng-style="{color:(x.employeeLeave >2 ?'red':'green')}">{{x.employeeLeave + "Leaves"}}</td>
                 </tr>

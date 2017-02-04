@@ -9,7 +9,13 @@ angular.module('fundooHrApp').controller("invoceCtrl", function($scope, $http) {
     $scope.go = function()
     {
         console.log("in method...");
-        $scope.image ='images/download.png';
-        $scope.Message="meru_invoice.xls";
-      }
+        $scope.image = 'images/download.png';
+        $scope.Message = "meru_invoice.xls";
+        $scope.Message1 = "craftsville_invoice.xls";
+        $scope.Message2 = "Nexteducation_invoce.xls";
+        $scope.Message3 = "gretip_invoice.xls";
+        $scope.Message4 = "Valuepitch_invoice.xls";
+
+
+    }
 });
