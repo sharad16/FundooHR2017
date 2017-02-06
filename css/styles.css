@@ -218,17 +218,6 @@ body {
     font-size: 18px;
     color: rgba(59, 83, 114, 1);
 }
-
-margin-top: 8px;
-border-radius: 5px;
-margin-top: 8px;
-border-radius: 5px;
-margin-left: 93.5px;
-width: 113px;
-height: 41px;
-font-size: 18px;
-border: 1px solid rgba(59, 83, 114, 1);
-
 }
 .text-danger {
     color: rgba(236, 13, 13, 1);
@@ -277,7 +266,133 @@ border: 1px solid rgba(59, 83, 114, 1);
 .glyphicon-user:before {
     color: rgba(59, 83, 114, 1);
 }
+/*########################Dashboard markeddata##################*/
+.mark1{
+  float:left;
+  display: inline;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: green;
+  margin-left: 50px;
+}
+#marknum{
+  width: 35px;
+height: 21px;
+opacity: 1;
 
+}
+#marknum{
+text-align: left;
+color: #FFFFFF;
+font-family: LucidaGrande-Bold;
+font-size: 18px;
+margin: 10px 10px 6px 20px;
+
+}
+#marked1{
+  padding-top: 70%;
+  text-align: left;
+  color: #18880D;
+  font-family: AppleGothic;
+  font-size: 18px;
+  width: 67px;
+height: 22px;
+opacity: 1;
+}
+.unmark1{
+display:inline;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+background-color: red;
+  margin-left: 100px;
+
+
+}
+#unmarknum{
+  width: 35px;
+height: 21px;
+opacity: 1;
+  }
+  #unmarknum{
+    text-align: left;
+color: #FFFFFF;
+font-family: LucidaGrande-Bold;
+font-size: 18px;
+margin: 10px 6px 6px 15px;
+
+}
+.falloutdata1{
+  width: 50px;
+height: 78px;
+opacity: 1;
+}
+.falloutdata1{
+  text-align: left;
+color: #E35656;
+font-family: AppleGothic;
+font-size: 64px;
+margin-left: 90px;
+}
+.fallouttext1{
+  width: 79px;
+height: 17px;
+opacity: 1;
+}
+.fallouttext1{
+  text-align: left;
+color: #E35656;
+font-family: AppleGothic;
+font-size: 14px;
+margin-left: 90px;
+}
+.leave1{
+  width: 95px;
+height: 78px;
+opacity: 1;
+
+}
+.leave1{
+  text-align: left;
+color: #E35656;
+font-family: AppleGothic;
+font-size: 64px;
+margin-left: 90px;
+}
+.status1{
+  width: 32px;
+height: 19px;
+opacity: 1;
+}
+.status1{
+  text-align: left;
+color: #6FB8D9;
+font-family: AppleGothic;
+font-size: 16px;
+margin:130px 137px 73px 90px;
+
+}
+.unmarktext1{
+  width: 89.4px;
+height: 22px;
+opacity: 1;
+
+}
+.unmarktext1{
+  text-align: left;
+color: #E35656;
+font-family: AppleGothic;
+font-size: 18px;
+margin-left: 196px;
+margin-top: 20px;
+}
+#marknam{
+
+}
 /*########################Header##################*/
 .sidebar {
     width: 311px;
@@ -635,14 +750,13 @@ button.Generate {
     }
 }
 
-/*@media only screen and (min-device-width: 412px) and (max-device-width: 768px)
+@media only screen and (min-device-width: 412px) and (max-device-width: 1024px)
 {
   #Attzipgen{
-    width: 30%;
-    margin-left: 120px;
-    margin-top: 30%;
+  
+    margin-top: 40%;
     }
-  }*/
+  }
 
 /*#Attzipgen{
     margin-top: 15%;
@@ -800,7 +914,7 @@ span.employee ng-binding {
     text-align: left;
     color: #6FB8D9;
     font-family: LucidaGrande-Bold;
-    line-height: 220px;
+margin-top: 6%;
     font-size: 18px;
     margin-left: 70px;
 }
@@ -826,7 +940,7 @@ img.pr {
     text-align: left;
     color: #6FB8D9;
     font-family: LucidaGrande-Bold;
-    line-height: 220px;
+
     font-size: 18px;
     margin-left: 70px;
 }
@@ -1051,7 +1165,7 @@ td.tdata1 {
 @media only screen and (min-device-width: 412px) and (max-device-width: 414px) {
     button {
         margin-left: 22%;
-        margin-top: 40%;
+        margin-top: 10%;
     }
 }
 #headsall {
