@@ -18,7 +18,7 @@
              }
              return deferred.promise;
          }];
-// loginRequired function will check for token.
+/**loginRequired function will check for token.*/
          var loginRequired = ['$q', '$location', '$auth', function($q, $location, $auth) {
              var deferred = $q.defer();
              if ($auth.isAuthenticated()) {
@@ -30,20 +30,20 @@
          }];
          $urlRouterProvider.otherwise('/');//Default state
          $stateProvider
-             .state('login', { //Login state
+             .state('login', { /**Login state*/
                  url: '/login',
                  templateUrl: 'templates/login.html',
                  controller: 'loginController',
                  resolve: {
-                     skipIfLoggedIn: skipIfLoggedIn //Require for login authothication.
+                     skipIfLoggedIn: skipIfLoggedIn /**Require for login authothication.*/
                  }
              })
-             .state('logout', { //logout state
+             .state('logout', { /**logout state*/
                  url: '/logout',
                  template: null,
                  controller: 'logoutController'
              })
-             .state('home', {// Home state
+             .state('home', {/** Home state ie parent states */
                  url: '/',
                  templateUrl: 'templates/navbar.html',
                  controller: 'homeController',
@@ -52,15 +52,15 @@
                  }
              })
 
-         .state('home.dashboard',{ //Dashboard state
+         .state('home.dashboard',{ /**Dashboard state ie child state*/
                  url: 'dashboard',
-                 templateUrl: 'templates/cards.html',
+                 templateUrl: 'templates/dashBoard.html',
                  controller: 'DashCtrl',
                  resolve: {
                      loginRequired: loginRequired
                  }
              })
-             .state('home.report', { //Report state
+             .state('home.report', { /**Report state*/
                  url: 'report',
                  templateUrl: 'templates/reportCards.html',
                  controller: 'reportCtrl',
@@ -68,7 +68,7 @@
                      loginRequired: loginRequired
                  }
              })
-             .state('home.payslip', { // SallarySlip state
+             .state('home.payslip', { /** SallarySlip state*/
                  url: 'salary',
                  templateUrl: 'templates/salPaySlip.html',
                  controller: 'selectAll',
@@ -77,7 +77,7 @@
                  }
              })
 
-         .state('home.attReport', { // Attandance state
+         .state('home.attReport', { /**Attandance  report state */
                  url: 'attReport',
                  templateUrl: 'templates/attendanceReport.html',
                  controller: 'AttCtrl',
@@ -85,7 +85,7 @@
                      loginRequired: loginRequired
                  }
              })
-             .state('home.invoiceReport', { // Invoice Report state
+             .state('home.invoiceReport', { /** Invoice Report state*/
                  url: 'invoiceReport',
                  templateUrl: 'templates/invoiceReport.html',
                  controller: 'AttinCtrl',
@@ -93,7 +93,7 @@
                      loginRequired: loginRequired
                  }
              })
-             .state('home.next', { // Next state for downloading  invoiceReport
+             .state('home.next', { /** Next state for downloading  invoiceReport*/
                  url: 'attInvoice',
                  templateUrl: 'templates/attendanceDownload.html',
                  controller: 'nextPageCtrl',
@@ -101,7 +101,7 @@
                      loginRequired: loginRequired
                  }
              })
-             .state('home.zip', { //zip state
+             .state('home.zip', { /**zip state for downloading pdf and zip file*/
                  url: 'invoiceReport/Invoicezip',
                  templateUrl: 'templates/invoceZip.html',
                  controller: 'invoceCtrl',

@@ -14,10 +14,10 @@
     </center>
     <div  id="sall"><input type="checkbox" ng-model="all" ng-click="toggleAll()" ng-change="selectedAllEmp(employeesalary)" id="said">Select All</input>
     </div>
-    <button class="disable" ng-class="{'enable':checkboxValid}" style="margin-left:40%; ng-disabled="!checkboxValid||ImageLoading" ng-click="dispFile()">Generate</button>
-    <a><img ng-click="takeId()" class="payslip_image" ng-src="{{image1}}" /></a>
+    <button class="disable" ng-class="{'enable':checkboxValid}" style="margin-left:40%;" ng-disabled="!checkboxValid||ImageLoading" ng-click="dispFile()">Generate</button>
+    <a><img ng-click="takeId()" class="payslip_image" id="paysaldown" ng-src="{{image1}}" /></a>
     <span class="loader">
-     <img ng-if="ImageLoading" src="images/loader.gif" width="25px" height="25px" />
+     <img ng-if="ImageLoading" src="images/loader.gif" width="25px" height="25px"id="loadid" />
      </span>
     &nbsp
 </div>

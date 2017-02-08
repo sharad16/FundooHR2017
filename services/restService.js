@@ -1,6 +1,6 @@
 /** rest call with base url */
 angular.module("fundooHrApp").service('restService', function($q, $log, $http) {
-    var baseUrl = "http://192.168.0.25:3000/";
+    var baseUrl = "http://192.168.0.21:3000/";
     var token = localStorage.getItem("satellizer_token");
     /** getting data*/
     this.getRequest = function(path, query) {
