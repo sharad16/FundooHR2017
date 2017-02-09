@@ -27,7 +27,44 @@ promise.then(function(data) {
              });
          }
 
-         $scope.checkAll = function() {
-             console.log($scope.CompanyList);
+
+   $scope.checkAll=function()
+   {
+     console.log($scope.CompanyList);
+     angular.forEach($scope.CompanyList,function(key,value){
+       console.log("inside checkAll")
+           console.log(key);
+          angular.forEach(key,function(item){
+            for(var i=0;i<item.length; i++)
+            {
+             console.log(item[i].selected);
+             if(item[i].selected){
+               $scope.clickable=true;
+
+             }
+
+            }
+               });
+             });
+               }
+
+   $scope.enableCheckBoxes=function(index)
+{
+  // console.log(selected);
+  console.log(index);
+  console.log("enableing link...");
+  angular.forEach($scope.CompanyList,function(key,value){
+      //  console.log(key);
+       angular.forEach(key,function(item){
+         for(var i=0;i<item.length; i++)
+         {
+          console.log(item[i].selected);
+          if(item[i].selected){
+            $scope.clickable=true;
+          }
+
          }
+            });
+          });
+  }
      });

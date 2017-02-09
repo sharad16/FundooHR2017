@@ -26,13 +26,6 @@
 #invcolor {
     color: green;
 }
-
-/*@media only screen and (min-device-width: 768px) and (max-device-width: 2560px) {
-    div.gene {
-        margin-left: 35%;
-    }
-}*/
-
 .nav-brand {
     opacity: 100;
     text-align: left;
@@ -1140,7 +1133,7 @@ td.tdata1 {
 }
 @media only screen and (min-device-width: 412px) and (max-device-width: 1024px) {
     #attacard {
-        margin-left: 20px;
+        margin-left: 15px;
     }
 }
 @media (max-width: 412px) {
@@ -1270,6 +1263,15 @@ h6.pr1 {
     margin-top: 150px;
     font-size: 20px;
     display: -webkit-inline-box;
+}
+.pr12{
+  max-width: 40px;
+  max-height: 50px;
+  opacity: 100;
+color: #3B5372;
+ont-family: material;
+display: inline-block;
+  margin-left: -57%;
 }
 h6.pr2 {
     margin-left: 40px;
@@ -1412,6 +1414,8 @@ h6.pr2 {
             font-weight: bold;
             font20px-family: LucidaGrande-Bold;
         }
+
+
         img.payslip_image {
             margin-top: 20px;
             width: 42px;
@@ -1643,7 +1647,7 @@ div.Select-All {
 }
 @media only screen and (min-device-width: 412px) and (max-device-width: 1024px) {
     .next {
-        margin-left: 70%;
+        margin-left: 68%;
     }
 }
 @media only screen and (min-device-width: 412px) and (max-device-width: 1024px)
@@ -1654,7 +1658,7 @@ div.Select-All {
 }
 @media only screen and (min-device-width: 412px) and (max-device-width: 1024px) {
 .next1{
-  margin-left: 80%;
+  margin-left: 77%;
 }
 }
 @media only screen and (min-device-width: 412px) and (max-device-width: 1024px) {
@@ -1743,8 +1747,3 @@ img.pr {
         margin-left: -30%;
       }
     }
-    /*@media(max-width:414px){
-  #rowid{
-    margin-left: 0px;
-  }
-}*/
