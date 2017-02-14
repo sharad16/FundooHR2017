@@ -18,6 +18,7 @@ promise.then(function(data) {
                          });
                 });
        });
+
        $scope.toggleAll = function(index) {
                var toggleStatus = $scope.CompanyList[index].selected;
              console.log(toggleStatus);
@@ -31,40 +32,47 @@ promise.then(function(data) {
    $scope.checkAll=function()
    {
      console.log($scope.CompanyList);
-     angular.forEach($scope.CompanyList,function(key,value){
+     angular.forEach($scope.CompanyList,function(key,value)
+     {
        console.log("inside checkAll")
            console.log(key);
-          angular.forEach(key,function(item){
-            for(var i=0;i<item.length; i++)
-            {
-             console.log(item[i].selected);
-             if(item[i].selected){
-               $scope.clickable=true;
+          angular.forEach(key,function(item)
+          {
+              for(var i=0;i<item.length; i++)
+             {
+               console.log(item[i].selected);
+               if(item[i].selected)
+              {
+                $scope.clickable=true;
 
              }
 
             }
-               });
-             });
-               }
-
-   $scope.enableCheckBoxes=function(index)
-{
-  // console.log(selected);
-  console.log(index);
-  console.log("enableing link...");
-  angular.forEach($scope.CompanyList,function(key,value){
-      //  console.log(key);
-       angular.forEach(key,function(item){
-         for(var i=0;i<item.length; i++)
-         {
-          console.log(item[i].selected);
-          if(item[i].selected){
-            $scope.clickable=true;
-          }
-
-         }
             });
+        });
+    }
+/**function for fetching indidual Employee */
+   $scope.enableCheckBoxes=function(index)
+   {
+
+    // console.log("selected="+ selected);
+    console.log("index="+ index);
+    console.log("enableing link...");
+    angular.forEach($scope.CompanyList,function(key,value)
+    {
+          console.log("key="+ key);
+          angular.forEach(key,function(item)
+          {
+            for(var i=0;i<item.length; i++)
+            {
+              console.log(item[i].selected);
+              if(item[i].selected)
+              {
+                $scope.clickable=true;
+              }
+
+            }
           });
+      });
   }
-     });
+ });
